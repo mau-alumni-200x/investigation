@@ -80,6 +80,10 @@ import { asset } from '../utils/paths.js'
         武蔵野美術大学 2006年卒業生<br />
         同窓会幹事チーム一同<br />
       </p>
+      <p class="content__contact">
+        <span class="content__contact-label">お問い合わせ</span>
+        <a href="mailto:mau.alumni.200x@gmail.com">mau.alumni.200x@gmail.com</a>
+      </p>
     </footer>
   </div>
 </section>
@@ -158,6 +162,35 @@ import { asset } from '../utils/paths.js'
 
   .content__footer {
     text-align: right;
+  }
+
+  .content__contact {
+    margin-top: var(--spacing-12);
+    font-size: calc(13 * var(--fluid-unit)) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-8);
+    padding: 0 !important;
+  }
+
+  @media (min-width: 641px) {
+    .content__contact {
+      font-size: 13px !important;
+    }
+  }
+
+  .content__contact-label {
+    color: var(--color-text);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+
+  .content__contact a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    letter-spacing: 0.03em;
   }
 
   .content__signature {
