@@ -40,15 +40,19 @@ import { asset } from '../utils/paths.js'
             </div>
             <div class="content__event-item">
               <dt>時間</dt>
-              <dd>開場14:00 / 開始14:30 / 終了16:30予定</dd>
+              <dd>開場 14:00 <br>開始 14:30<br>終了 16:30（予定）</dd>
             </div>
             <div class="content__event-item">
               <dt>場所</dt>
-              <dd>武蔵野美術大学 鷹の台キャンパス 鷹の台ホール</dd>
+              <dd>武蔵野美術大学 <wbr />鷹の台キャンパス <wbr />鷹の台ホール</dd>
             </div>
             <div class="content__event-item">
               <dt>会費</dt>
-              <dd>12,000円</dd>
+              <dd>12,000円<br>
+                  <span class="content__event-item__description">
+                    事前オンライン決済を検討しておりますが、変更になる可能性もございます。決定次第、メールでご案内させていただきます。
+                  </span>
+              </dd>
             </div>
             <div class="content__event-item">
               <dt>服装</dt>
@@ -79,10 +83,11 @@ import { asset } from '../utils/paths.js'
       <p class="content__signature">
         武蔵野美術大学 2006年卒業生<br />
         同窓会幹事チーム一同<br />
-      </p>
-      <p class="content__contact">
-        <span class="content__contact-label">お問い合わせ</span>
-        <a href="mailto:mau.alumni.200x@gmail.com">mau.alumni.200x@gmail.com</a>
+        <p class="content__contact">
+          <a href="https://forms.gle/JydsrAB9Aiat345w6">
+            <span class="content__contact-label">お問い合わせ</span>
+          </a>
+        </p>
       </p>
     </footer>
   </div>
@@ -159,14 +164,19 @@ import { asset } from '../utils/paths.js'
   .content__event-item dd {
     flex: 1;
   }
-
+  .content__event-item__description{
+    display: block;
+    font-size: calc(12 * var(--fluid-unit));
+    line-height: 1.4;
+    margin-top: var(--spacing-8);
+  }
   .content__footer {
     text-align: right;
   }
 
   .content__contact {
-    margin-top: var(--spacing-12);
-    font-size: calc(13 * var(--fluid-unit)) !important;
+    margin-bottom: var(--spacing-32);
+    font-size: calc(14 * var(--fluid-unit)) !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,7 +197,6 @@ import { asset } from '../utils/paths.js'
   }
 
   .content__contact a {
-    color: var(--color-accent);
     text-decoration: underline;
     text-underline-offset: 0.2em;
     letter-spacing: 0.03em;
