@@ -1,0 +1,43 @@
+---
+// Hero section - Full viewport with monogram and vertical text
+
+import { asset } from '../utils/paths.js'
+---
+
+<section class="hero">
+  <img class="logo" src={asset('assets/imgs/logo.svg')} alt="">
+  <img class="title" src={asset('assets/imgs/title.svg')} alt="">
+  <div class="asterisks">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+  </div>
+</section>
+
+<style>
+.hero {
+  margin:2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:2rem;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.title {
+  width: 1.5rem;
+}
+
+.asterisks {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-32);
+  & img {
+    width: 1.5rem;
+  }
+}
+</style>

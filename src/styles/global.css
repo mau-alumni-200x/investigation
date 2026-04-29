@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Global Styles - MAU Alumni Reunion Site
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+	/* Colors */
+	--color-bg: #f5f0e8;
+	--color-accent: #cd0303;
+	--color-text: #333;
+	--color-header-bg: #3a3a3a;
+	--color-white: #fff;
+
+	/* Typography */
+	--font-display: "Courier Prime", monospace;
+	--font-body: "游明朝", "Yu Mincho", "YuMincho", "Hiragino Mincho Pro", serif;
+	--font-script: "Pinyon Script", cursive;
+
+	/* Fluid typography base (390px viewport) */
+	--fluid-unit: calc(100vw / 390);
+
+	/* Spacing */
+	--spacing-8: calc(8 * var(--fluid-unit));
+	--spacing-12: calc(12 * var(--fluid-unit));
+	--spacing-16: calc(16 * var(--fluid-unit));
+	--spacing-20: calc(20 * var(--fluid-unit));
+	--spacing-24: calc(24 * var(--fluid-unit));
+	--spacing-32: calc(32 * var(--fluid-unit));
+	--spacing-48: calc(48 * var(--fluid-unit));
+
+	/* Layout */
+	--max-width: 640px;
+	--header-height: calc(40 * var(--fluid-unit));
+}
+
+/* PC breakpoint - fix fluid units */
+@media (min-width: 641px) {
+	:root {
+		--fluid-unit: 1.641px; /* 640 / 390 */
+		--header-height: 66px;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   CSS Reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: calc(16 * var(--fluid-unit));
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+@media (min-width: 641px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+body {
+	font-family: var(--font-body);
+	color: var(--color-text);
+	/* background-color: var(--color-bg); */
+	/* background: repeating-conic-gradient(#000 0 0.0001%,#0000 0 0.0002%); */
+	/* 1. 最小の高さを確保（コンテンツが少なくても全体に広げる） */
+	min-height: 100vh;
+	margin: 0;
+
+	/* 2. 背景の設定 */
+	background-color: #e8e4d9; /* ベースの色 */
+	/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 12 12'%3E%3Crect width='1' height='1' fill='%23000' opacity='0.03'/%3E%3Crect x='3' y='1' width='2' height='2' fill='%23000' opacity='0.02'/%3E%3Crect x='8' y='2' width='1' height='1' fill='%23fff' opacity='0.2'/%3E%3Crect x='1' y='5' width='2' height='1' fill='%23000' opacity='0.03'/%3E%3Crect x='6' y='7' width='2' height='2' fill='%23000' opacity='0.05'/%3E%3Crect x='10' y='9' width='1' height='2' fill='%23fff' opacity='0.1'/%3E%3C/svg%3E"); */
+	background-image:url("/pre-investigation/assets/imgs/bg.png");
+	background-size: 32px 32px; /* ここでピクセルパターンの密度を決定 */
+	background-repeat: repeat;
+
+	/* 3. 戦略的な選択：スクロールに追従させる（推奨） */
+	background-attachment: scroll;
+
+	line-height: 1.8;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+.container {
+	width: 100%;
+	max-width: var(--max-width);
+	margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Vertical Text (Japanese)
+   -------------------------------------------------------------------------- */
+.vertical-text {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}

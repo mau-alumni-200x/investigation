@@ -1,0 +1,163 @@
+---
+// Content section - Main text area with event details
+
+import { asset } from '../utils/paths.js'
+---
+
+<section class="content">
+  <img src={asset('assets/imgs/tagline.svg')} alt="">
+  <h2>武蔵野美術大学<br />2006年卒業生のみなさん</h2>  <!-- Main Text -->
+  <p>
+    2026年11月。<br />
+    卒業後20周年を迎える節目の年に、<wbr />同期生が<wbr />一堂に会する初の同窓会を<wbr />開催いたします。<br />
+    <br />
+    まだ計画段階ではありますが、<wbr />当日は学科の垣根を越えて、<wbr />できるだけ多くのみなさんと楽しい<wbr />ひとときを過ごしたいと<wbr />考えています。<br />
+    <br />
+    また、同期生だけでなく、<wbr />大学時代をともに過ごした<wbr />親しい先輩・後輩の<wbr />方々、お世話になった教授の方々も<wbr />お誘いする予定です。<br />
+    <br />
+    日時と会場を決めるにあたり、<wbr />まずは参加希望者の<wbr />大まかな人数を確認させて<wbr />いただきたく、<wbr />事前アンケートを<wbr />ご用意しました。<br />
+    <br />
+    ご多用のところ<wbr />恐れ入りますが、<wbr />以下のリンク<wbr />（Google Forms）<wbr />から3月<del style="color:rgb(178, 60, 60)">8日</del><span style="color: rgb(178, 60, 60); font-weight:900;">&nbsp;30日(月)</span>まで<wbr />にご回答いただけますと幸いです。<br /><span style="font-size:1rem; color:rgb(178, 60, 60);">※ 回答期日延長しました</span>
+  </p>
+
+    <!-- Event Details Box -->
+     <div class="content__event-wrapper">
+       <div class="content__event-box">
+         <h2 class="content__event-title">開催概要</h2>
+         <dl class="content__event-list">
+            <div class="content__event-item">
+              <dt>時期</dt>
+              <dd>2026年11月の土日</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>時間</dt>
+              <dd>お昼から夕方までの2〜3時間</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>場所</dt>
+              <dd>東京都内セレモニー会場</dd>
+            </div>
+          </dl>
+          ＊誠に申し訳ございませんが、安全面などを考慮し、お子さまの同伴はご遠慮いただきますようお願いいたします。<br /></br />
+          ＊参加希望者のみなさんには、日時・会場・会費を決定のうえ、4月にあらためて出欠確認のご案内をさせていただきます。<br />
+        </div>
+      </div>
+
+  <p>
+    連絡先をご存じの同級生・先輩・後輩が<wbr>いらっしゃいましたら、<wbr />ぜひこのサイトを共有して<wbr />いただけると嬉しいです。<br /><br />
+    みなさんの回答を<wbr />　心よりお待ちしております。
+  </p>
+
+  <div class="asterisks">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+  </div>
+
+    <!-- Signature -->
+    <footer class="content__footer">
+      <p class="content__signature">
+        武蔵野美術大学 2006年卒業生<br />
+        同窓会有志一同<br />
+      </p>
+    </footer>
+  </div>
+</section>
+
+<style>
+  .content {
+    /* background-color: var(--color-bg); */
+    padding: var(--spacing-32) var(--spacing-24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+    & h2 {
+      text-align: center;
+    }
+    & p {
+      word-break: keep-all;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.75;
+      padding: var(--spacing-24)
+    } 
+  }
+
+  .content__event-wrapper {
+    background-color: white;
+    padding: var(--spacing-16);
+  }
+  .content__event-box {
+    background-color: white;
+    border: 0.05rem solid var(--color-accent);
+    padding: var(--spacing-24);
+  }
+
+  .content__event-title {
+    font-size: calc(20 * var(--fluid-unit));
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: 641px) {
+    .content__event-title {
+      font-size: 16px;
+    }
+  }
+
+  .content__event-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+    margin-bottom: var(--spacing-24);
+  }
+
+  .content__event-item {
+    display: flex;
+    gap: var(--spacing-8);
+  }
+
+  .content__event-item dt {
+    flex-shrink: 0;
+    width: calc(48 * var(--fluid-unit));
+    font-weight: 900;
+  }
+
+  @media (min-width: 641px) {
+    .content__event-item dt {
+      width: 60px;
+    }
+  }
+
+  .content__event-item dd {
+    flex: 1;
+  }
+
+  .content__footer {
+    text-align: right;
+  }
+
+  .content__signature {
+    font-size: calc(16 * var(--fluid-unit))!important;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 641px) {
+    .content__signature {
+      font-size: 14px;
+    }
+  }
+
+.asterisks {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-32);
+  & img {
+    width: 1.5rem;
+  }
+}
+
+</style>

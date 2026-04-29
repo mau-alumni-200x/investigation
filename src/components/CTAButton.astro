@@ -1,0 +1,28 @@
+---
+// CTA Button component - Link to survey form
+const {
+  href = "https://forms.gle/PLACEHOLDER",
+  text = "アンケートご回答はこちら"
+} = Astro.props;
+---
+
+<div class="cta">
+  <a href={href} class="cta__button" target="_blank" rel="noopener noreferrer">
+    {text}
+  </a>
+</div>
+
+<style>
+  .cta {
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 0 var(--spacing-32) var(--spacing-48);
+    padding: var(--spacing-8);
+    text-align: center;
+    background-color: var(--color-accent);
+  }
+
+  .cta__button {
+  }
+</style>
