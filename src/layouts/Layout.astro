@@ -22,7 +22,7 @@ const { title = "ムサビ同窓会 | 武蔵野美術大学 200X年度卒業生"
 
     <title>{title}</title>
   </head>
-  <body>
+  <body style={`--base-bg-image: url("${import.meta.env.BASE_URL}assets/imgs/bg.png")`}>
     <slot />
   </body>
 </html>
