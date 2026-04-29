@@ -6,20 +6,29 @@ import { asset } from '../utils/paths.js'
 
 <section class="content">
   <img src={asset('assets/imgs/tagline.svg')} alt="">
-  <h2>武蔵野美術大学<br />2006年卒業生のみなさん</h2>  <!-- Main Text -->
+  <h2>武蔵野美術大学<br />2006年卒業生同窓会のご案内</h2>
+  <!-- Main Text -->
   <p>
-    2026年11月。<br />
-    卒業後20周年を迎える節目の年に、<wbr />同期生が<wbr />一堂に会する初の同窓会を<wbr />開催いたします。<br />
-    <br />
-    まだ計画段階ではありますが、<wbr />当日は学科の垣根を越えて、<wbr />できるだけ多くのみなさんと楽しい<wbr />ひとときを過ごしたいと<wbr />考えています。<br />
-    <br />
-    また、同期生だけでなく、<wbr />大学時代をともに過ごした<wbr />親しい先輩・後輩の<wbr />方々、お世話になった教授の方々も<wbr />お誘いする予定です。<br />
-    <br />
-    日時と会場を決めるにあたり、<wbr />まずは参加希望者の<wbr />大まかな人数を確認させて<wbr />いただきたく、<wbr />事前アンケートを<wbr />ご用意しました。<br />
-    <br />
-    ご多用のところ<wbr />恐れ入りますが、<wbr />以下のリンク<wbr />（Google Forms）<wbr />から3月<del style="color:rgb(178, 60, 60)">8日</del><span style="color: rgb(178, 60, 60); font-weight:900;">&nbsp;30日(月)</span>まで<wbr />にご回答いただけますと幸いです。<br /><span style="font-size:1rem; color:rgb(178, 60, 60);">※ 回答期日延長しました</span>
+    2026年11月。<br>
+    卒業後20周年を迎える節目の年に、<br>
+    同期生が一堂に会する初の同窓会を<br>
+    開催いたします。<br>
+    <br>
+    大学ならびに校友会のご協力のもと、<br>
+    今回の同窓会は<br>
+    武蔵野美術大学 鷹の台キャンパス<br>
+    鷹の台ホールで開催する<br>
+    運びとなりました。<br>
+    <br>
+    会の詳細をお知らせいたしますので、<br>
+    お手数ではございますが<br>
+    下記リンク（Google Forms）から<br>
+    あらためて出欠のご回答を<br>
+    いただけますと幸いに存じます。
   </p>
-
+  <p>
+    ご回答期限：8月31日（月）まで
+  </p>
     <!-- Event Details Box -->
      <div class="content__event-wrapper">
        <div class="content__event-box">
@@ -27,25 +36,36 @@ import { asset } from '../utils/paths.js'
          <dl class="content__event-list">
             <div class="content__event-item">
               <dt>時期</dt>
-              <dd>2026年11月の土日</dd>
+              <dd>2026年11月28日（土）</dd>
             </div>
             <div class="content__event-item">
               <dt>時間</dt>
-              <dd>お昼から夕方までの2〜3時間</dd>
+              <dd>開場14:00 / 開始14:30 / 終了16:30予定</dd>
             </div>
             <div class="content__event-item">
               <dt>場所</dt>
-              <dd>東京都内セレモニー会場</dd>
+              <dd>武蔵野美術大学 鷹の台キャンパス 鷹の台ホール</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>会費</dt>
+              <dd>12,000円</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>服装</dt>
+              <dd>スマートカジュアル</dd>
             </div>
           </dl>
-          ＊誠に申し訳ございませんが、安全面などを考慮し、お子さまの同伴はご遠慮いただきますようお願いいたします。<br /></br />
-          ＊参加希望者のみなさんには、日時・会場・会費を決定のうえ、4月にあらためて出欠確認のご案内をさせていただきます。<br />
+          <ul class="content__notes">
+            <li>当日はアルコール・ソフトドリンクの飲み放題と軽食をご用意いたします。</li>
+            <li>誠に申し訳ございませんが、安全面などを考慮し、お子さまの同伴はご遠慮いただきますようお願いいたします。</li>
+            <li>会費のお支払い方法など未定事項につきましては、追ってご案内させていただきます。</li>
+            <li>万一、回答後にご参加が難しくなってしまった場合は、開催2週間前までに幹事チームまでご連絡をお願い申し上げます。</li>
+          </ul>
         </div>
       </div>
 
   <p>
-    連絡先をご存じの同級生・先輩・後輩が<wbr>いらっしゃいましたら、<wbr />ぜひこのサイトを共有して<wbr />いただけると嬉しいです。<br /><br />
-    みなさんの回答を<wbr />　心よりお待ちしております。
+    みなさんと再会できることを<wbr />心から楽しみにしております。
   </p>
 
   <div class="asterisks">
@@ -58,7 +78,7 @@ import { asset } from '../utils/paths.js'
     <footer class="content__footer">
       <p class="content__signature">
         武蔵野美術大学 2006年卒業生<br />
-        同窓会有志一同<br />
+        同窓会幹事チーム一同<br />
       </p>
     </footer>
   </div>
@@ -150,6 +170,28 @@ import { asset } from '../utils/paths.js'
       font-size: 14px;
     }
   }
+
+.content__notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  font-size: calc(13 * var(--fluid-unit));
+  & li {
+    padding-left: 1.4em;
+    position: relative;
+    &::before {
+      content: "※";
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  .content__notes {
+    font-size: 13px;
+  }
+}
 
 .asterisks {
   display: flex;
