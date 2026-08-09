@@ -53,15 +53,19 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					<img class="schedule-spark" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" />
 					<h2 class="card-ttl card-ttl--red" id="schedule-ttl">当日の流れ ( 予定 )</h2>
 					<dl class="schedule">
-						<dt>13:30 〜</dt><dd>受付開始</dd>
-						<dt>14:00 〜</dt><dd>ご挨拶　イントロ　ウォーミングアップ</dd>
-						<dt>14:40 〜</dt><dd>パラバルーンあそび</dd>
-						<dt>15:00 〜</dt><dd>休憩 10分</dd>
-						<dt>15:15 〜</dt><dd>パラバルーンあそび　音楽に合わせて</dd>
-						<dt>15:25 〜</dt><dd>休憩 5分</dd>
-						<dt>15:30 〜</dt><dd>パラバルーンあそびお披露目</dd>
-						<dt>16:00 〜</dt><dd>お片づけ、お迎えまであそび</dd>
+						<dt>13:30</dt><dd>受付開始</dd>
+						<dt>14:00</dt><dd>イントロ・ウォームアップ</dd>
+						<dt>14:40</dt><dd>パラバルーンあそび</dd>
+						<dt>15:00</dt><dd>休憩（10分）</dd>
+						<dt>15:15</dt><dd>パラバルーンあそび 音楽に合わせて</dd>
+						<dt>15:25</dt><dd>休憩（5分）</dd>
+						<dt>15:30</dt><dd>パラバルーンあそび お披露目</dd>
+						<dt>16:00</dt><dd>お片付け</dd>
 					</dl>
+					<ul class="schedule-notes">
+						<li>スケジュールは変更になる場合があります。</li>
+						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします。</li>
+					</ul>
 					<p class="schedule-bubble">
 						<span style={`background-image: url(${asset("assets/imgs/workshop/sec1-2.svg")});`}>お土産パラシュートがあるよ</span>
 					</p>
@@ -73,26 +77,21 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					<dl class="guide">
 						<dt>会 場</dt>
 						<dd>
-							<span class="u-em">武蔵野美術大学　課外センター</span>
+							<span class="u-em">武蔵野美術大学 課外センター</span>
 							<small class="u-right">（鷹の台ホール隣）</small>
 						</dd>
 						<dt>参加費</dt>
 						<dd>
-							お子様一人<strong> 1,500<span class="u-unit">円</span> </strong><em class="u-red">※現金のみ</em><br />
-							<small>※保護者の参加もOK！参加無料。</small>
+							1人<strong> 1,500<span class="u-unit">円</span></strong>
 						</dd>
 						<dt>対象年齢</dt>
 						<dd class="guide-age">
-							<strong>2<span class="u-unit">歳〜</span></strong>
-							<small>※2歳未満でも、保護者と離れて過ごせるお子さんはご相談ください。</small>
+							<strong>2<span class="u-unit">歳以上</span></strong>
 						</dd>
 						<dt>持ち物</dt>
 						<dd class="guide-items">
 							<span class="guide-itemsText">
-								<span class="u-em">水筒、おやつ</span><small>（休憩で食べられるもの）</small><br />
-								<span class="u-em">ハンカチ、ティッシュ、</span><br />
-								<span class="u-em">着替え・オムツ</span><small>（必要に応じて）</small><br />
-								<span class="u-em">ゴミ袋</span><small>（ゴミ持ち帰り用）</small>
+								<span class="u-em">水筒、おやつ</span><small>（休憩で食べられるもの）</small>、<span class="u-em">ハンカチ、ティッシュ、着替え・おむつ</span><small>（必要に応じて）</small>、<span class="u-em">ゴミ袋</span>
 							</span>
 							<span class="guide-bubble" role="note">
 								<svg viewBox="0 0 100 70" aria-hidden="true" preserveAspectRatio="none">
@@ -121,45 +120,63 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			<section class="hosts" aria-labelledby="hosts-ttl">
 				<div class="hosts-inner">
 					<h2 class="hosts-ttl" id="hosts-ttl" style={`background-image: url(${asset("assets/imgs/workshop/sec2-ttl.svg")});`}>
-						<span class="hosts-ttl-text">ワークショップ<br />主催者</span>
+						<span class="hosts-ttl-text">ワークショップ<br />スタッフ</span>
 					</h2>
 					<div class="hosts-grid">
 						<article class="host">
 							<img class="host-img" src={asset("assets/imgs/workshop/sec2-1@2x.png")} alt="" width="448" height="329" />
 							<div class="host-body">
-								<p class="host-grad">2006年視デ卒</p>
-								<h3 class="host-name">半澤菜穂子（だいちゃん）</h3>
+								<p class="host-grad">2006年視デ卒｜主催者</p>
+								<h3 class="host-name">半澤菜穂子（なお先生）</h3>
 								<p class="host-desc">
-									現役こども園、保育園にてアトリエリスタとして働いているお先生。一日に最大40人の幼児と一斉にワークショップを行っている。ボーイスカウト、こどもワークショップの経験があり、乳児から中高生まで活動を行ってきた。
+									こども園や保育園でアトリエリスタとして働きながら、未就学児を中心とした子供向けのワークショップやイベントを企画・主催しています。学生時代のあだ名はだいちゃん。
 								</p>
 							</div>
 						</article>
 						<article class="host">
 							<img class="host-img" src={asset("assets/imgs/workshop/sec2-2@2x.png")} alt="" width="381" height="329" />
 							<div class="host-body">
-								<p class="host-grad">2008年視デ卒</p>
-								<h3 class="host-name">山崎佳奈（もりかな）</h3>
+								<p class="host-grad">2008年視デ卒｜主催者</p>
+								<h3 class="host-name">山崎佳奈（もりかな先生）</h3>
 								<p class="host-desc">
-									視デ卒業後保育士資格を取得。現役保育士。泣く子にも寄り添い動じない安心を作る先生。
+									保育士として働きながら、なお先生と一緒に子供向けのイベントを開催しています。子どもが安心して過ごせる環境づくりを大切にしています。
 								</p>
 							</div>
 						</article>
 					</div>
 					<p class="hosts-bubble" style={`--bubble-circle: url(${asset("assets/imgs/workshop/sec2-3.svg")});`}>
-						<span>他、保育士仲間、図工専科教員も<br />サポートします！</span>
+						<span>他にも10名近くの保育士や図工専科教員が<br />ボランティアで参加予定です。</span>
 					</p>
 				</div>
 			</section>
 
-			<section class="notes" aria-label="注意事項">
-				<ul>
-					<li>参加費には、レクリエーション保険、お土産パラシュート、備品、スタッフへの交通費等含ませていただいております。</li>
-					<li>未就学児の保護者の方は、30〜60分ごとにお子さまの様子を見に来ていただけると幸いです。</li>
-					<li>2歳未満のお子さまや、保護者と離れることが難しい場合は、同窓会への参加が難しくなることがあります。</li>
-					<li>現役保育士・アトリエリスタが責任を持ってお子さまをお預かりします。安心してお任せください。</li>
-					<li>保護者の不安はお子さまに伝わります。当日は安心して送り出すお気持ちでお越しください。</li>
-					<li>お子さまが泣いたり離れられなかったことによる苦情・ご意見はご遠慮ください。</li>
-				</ul>
+			<section class="notes" aria-labelledby="notes-ttl">
+				<div class="notes-inner">
+					<h2 class="notes-ttl" id="notes-ttl">ご注意事項</h2>
+
+					<h3 class="notes-label">費用：</h3>
+					<ul>
+						<li>参加費にはレクリエーション保険、資材、ボランティアスタッフの交通費などの諸経費が含まれます。</li>
+						<li>保護者の方も一緒に遊ぶ場合は、お子様とは別に参加費が必要です。（見守りだけの場合は無料です）</li>
+					</ul>
+
+					<h3 class="notes-label">対象年齢：</h3>
+					<ul>
+						<li>年齢に関わらず、保護者と離れてワークショップに参加できるお子様が対象となります。</li>
+						<li>2歳未満でも参加できそうな場合は申し込み時にその旨をご記載ください。</li>
+					</ul>
+
+					<h3 class="notes-label">参加資格：</h3>
+					<ul>
+						<li>保護者から離れられないなど、お子様だけでの参加が難しい場合は、参加をお断りすることがあります。そのことによる責任は負いかねますのでご了承ください。</li>
+					</ul>
+
+					<h3 class="notes-label">当日のお願い：</h3>
+					<ul>
+						<li>未就学児の保護者の方は、30〜60分ごとにお子様の様子を見に来てください。</li>
+						<li>ゴミの持ち帰りにご協力ください。</li>
+					</ul>
+				</div>
 			</section>
 		</main>
 
@@ -362,6 +379,26 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				background: no-repeat center / 100% 100%;
 				font-size: 0.82rem;
 				font-weight: 700;
+			}
+
+			/* スケジュール下の注記 */
+			.schedule-notes {
+				padding: 0.4rem 1rem 0;
+				list-style: none;
+			}
+
+			.schedule-notes li {
+				position: relative;
+				padding-left: 1.3em;
+				font-size: max(12px, 0.78rem);
+				font-weight: 500;
+				line-height: 1.7;
+			}
+
+			.schedule-notes li::before {
+				content: "※";
+				position: absolute;
+				left: 0;
 			}
 
 			/* パラシュートに向く吹き出しのしっぽ（SVGはしっぽ無しピルのためCSSで付与） */
@@ -608,21 +645,35 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				padding: 1.75rem 1rem 9rem;
 			}
 
-			.notes ul {
+			.notes-inner {
 				max-width: 30rem;
 				margin: 0 auto;
+			}
+
+			.notes-ttl {
+				font-size: 1rem;
+				font-weight: 900;
+			}
+
+			.notes-label {
+				margin-top: 1rem;
+				font-size: 0.85rem;
+				font-weight: 900;
+			}
+
+			.notes ul {
 				list-style: none;
 			}
 
 			.notes li {
 				position: relative;
-				padding-left: 1.4em;
+				padding-left: 1.1em;
 				font-size: 0.8rem;
 				line-height: 1.9;
 			}
 
 			.notes li::before {
-				content: "※";
+				content: "・";
 				position: absolute;
 				left: 0;
 			}
@@ -719,7 +770,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					margin-left: auto;
 				}
 
-				.notes ul {
+				.notes-inner {
 					max-width: 64rem;
 				}
 
