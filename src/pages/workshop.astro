@@ -683,7 +683,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 				.hero-intro {
 					top: 74%;
-					font-size: max(12px, 2.9cqw);
+					/* タイトル幅に連動しつつ上限18px */
+					font-size: clamp(12px, 2.9cqw, 18px);
 				}
 
 				/* 写真：ズームをやめてワイドにトリミング */
