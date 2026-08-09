@@ -26,12 +26,15 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 		<header class="hero">
 			<div class="hero-lockup" data-parallax="-0.06">
 				<h1 class="hero-lockupTtl">
-					<img
-						src={asset("assets/imgs/workshop/ttl.svg")}
-						alt="ムサビ卒の現役保育士＆アトリエリスタによるワークショップ　同窓会参加者限定　子連れで！ムサビ同窓会を楽しもう　11月28日"
-						width="381.39"
-						height="399.3"
-					/>
+					<picture>
+						<source media="(min-width: 640px)" srcset={asset("assets/imgs/workshop/ttl-desktop.svg")} />
+						<img
+							src={asset("assets/imgs/workshop/ttl.svg")}
+							alt="ムサビ卒の現役保育士＆アトリエリスタによるワークショップ　同窓会参加者限定　子連れで！ムサビ同窓会を楽しもう　11月28日"
+							width="381.39"
+							height="399.3"
+						/>
+					</picture>
 				</h1>
 				<p class="hero-intro">
 					隣接会場でお子さま向けワークショップを開催！<br />
@@ -195,7 +198,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-size: calc(16px * 100vw / 390);
 			}
 
-			@media (min-width: 768px) {
+			@media (min-width: 640px) {
 				html {
 					font-size: 16px;
 				}
@@ -669,24 +672,76 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				content: " »";
 			}
 
-			/* ---------- PC ---------- */
+			/* ---------- PC（640px〜） ---------- */
 
-			@media (min-width: 768px) {
-				.notes {
-					padding-bottom: 2rem;
+			@media (min-width: 640px) {
+				/* ヒーロー：desktop用タイトル一式（幅563px固定・センター） */
+				.hero-lockup {
+					width: min(100%, 563px);
+					padding-top: 1rem;
 				}
 
-				/* PCレイアウトはモバイル確定後に改めて作る（暫定：タイトルはデザイン原寸のままセンター） */
+				.hero-intro {
+					top: 74%;
+					font-size: max(12px, 2.9cqw);
+				}
 
+				/* 写真：ズームをやめてワイドにトリミング */
+				.hero-photo {
+					margin-top: -10rem;
+					height: min(60vw, 30rem);
+				}
+
+				.hero-photoImg {
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					object-fit: cover;
+					object-position: center 70%;
+				}
+
+				.hero-deco--sparkWhite {
+					top: 60%;
+				}
+
+				/* コンテンツ幅（1列のまま少し広げる） */
+				.cards,
+				.hosts,
+				.notes-inner {
+					max-width: 34rem;
+				}
+
+				.notes {
+					padding-bottom: 2.5rem;
+				}
+
+				.cta {
+					left: auto;
+					right: 1.5rem;
+					bottom: 1.5rem;
+					padding: 0;
+					background: none;
+					box-shadow: none;
+				}
+
+				.cta-btn {
+					padding: 1rem 2.2rem;
+					box-shadow: 0 0.25rem 0.75rem rgba(122, 82, 48, 0.3);
+				}
+			}
+
+			/* ---------- PC（900px〜）：A4版の2カラム構成 ---------- */
+
+			@media (min-width: 900px) {
 				.cards {
-					max-width: 64rem;
+					max-width: 60rem;
 					grid-template-columns: 1fr 1fr;
 					align-items: start;
 					padding-top: 2.5rem;
 				}
 
-				.hosts-inner {
-					max-width: 64rem;
+				.hosts {
+					max-width: 60rem;
 				}
 
 				.hosts-grid {
@@ -695,7 +750,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					margin-top: 1rem;
 				}
 
-				/* PC（A4版）はイラスト左・テキスト右 */
+				/* A4版はイラスト左・テキスト右 */
 				.host {
 					display: grid;
 					grid-template-columns: 10rem 1fr;
@@ -712,36 +767,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					margin-top: 0;
 				}
 
-				/* PC（A4版）は白丸の吹き出し */
-				.hosts-bubble {
-					background: var(--bubble-circle) no-repeat center / 100% 100%;
-					width: 11.5rem;
-					height: 11.5rem;
-					display: grid;
-					place-content: center;
-					padding: 1.5rem;
-					border-radius: 0;
-					margin-top: -3rem;
-					margin-right: 2rem;
-					margin-left: auto;
-				}
-
 				.notes-inner {
-					max-width: 64rem;
-				}
-
-				.cta {
-					left: auto;
-					right: 1.5rem;
-					bottom: 1.5rem;
-					padding: 0;
-					background: none;
-					box-shadow: none;
-				}
-
-				.cta-btn {
-					padding: 1rem 2.2rem;
-					box-shadow: 0 0.25rem 0.75rem rgba(122, 82, 48, 0.3);
+					max-width: 60rem;
 				}
 			}
 
