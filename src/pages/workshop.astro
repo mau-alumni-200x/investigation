@@ -44,7 +44,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			</div>
 
 			<div class="hero-photo">
-				<img class="hero-fade" src={asset("assets/imgs/workshop/hero-bg-grad.svg")} alt="" />
 				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="0.03" />
 				<img class="hero-deco hero-deco--sparkYellow" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" data-parallax="0.03" />
 				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@3x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1788" height="1668" />
@@ -85,7 +84,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 							1人<strong> 1,500<span class="u-unit">円</span></strong>
 						</dd>
 						<dt>対象年齢</dt>
-						<dd class="guide-age">
+						<dd>
 							<strong>2<span class="u-unit">歳以上</span></strong>
 						</dd>
 						<dt>持ち物</dt>
@@ -134,7 +133,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 							</div>
 						</article>
 					</div>
-					<p class="hosts-bubble" style={`--bubble-circle: url(${asset("assets/imgs/workshop/sec2-3.svg")});`}>
+					<p class="hosts-bubble">
 						<span>他にも10名近くの保育士や図工専科教員が<br />ボランティアで参加予定です。</span>
 					</p>
 				</div>
@@ -279,11 +278,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				inset: 0;
 				z-index: 1;
 				overflow: hidden;
-			}
-
-			/* 写真上端の白フェード（モバイルでは雲の重なりで代替するため非表示） */
-			.hero-fade {
-				display: none;
 			}
 
 			/* 写真下端は次セクションの背景色へフェードアウト */
@@ -466,24 +460,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			/* 単位（円・歳〜）は数字よりひとまわり小さく */
 			.guide strong .u-unit {
 				font-size: 0.95rem;
-			}
-
-			.u-red {
-				color: var(--c-red);
-				font-style: normal;
-				font-size: max(12px, 0.78rem);
-				white-space: nowrap;
-			}
-
-			/* 2歳〜 と注記を横並びに */
-			.guide-age {
-				display: flex;
-				align-items: center;
-				gap: 0.7rem;
-			}
-
-			.guide-age small {
-				line-height: 1.6;
 			}
 
 			/* 持ち物リスト＋右に重なる記名吹き出し */
