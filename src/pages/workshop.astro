@@ -272,6 +272,17 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: none;
 			}
 
+			/* 写真下端は次セクションの背景色へフェードアウト */
+			.hero-photo::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 5rem;
+				background: linear-gradient(to bottom, rgba(255, 250, 238, 0), var(--c-cream));
+			}
+
 			/* 約1.5倍ズームで壁をカットし、写真の下端（子どもたち）を見せる */
 			.hero-photoImg {
 				display: block;
