@@ -158,10 +158,10 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					<h3 class="notes-label">当日の流れ：</h3>
 					<ul>
 						<li>スケジュールは変更になる場合があります。</li>
-						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします。</li>
+						<li>保護者から離れられないなど、お子様だけでの参加が難しい場合は、参加をお断りすることがあります。そのことによる責任は負いかねますのでご了承ください。</li>
 						<li>未就学児の保護者の方は、30〜60分ごとにお子様の様子を見に来てください。</li>
 						<li>ゴミの持ち帰りにご協力ください。</li>
-						<li>保護者から離れられないなど、お子様だけでの参加が難しい場合は、参加をお断りすることがあります。そのことによる責任は負いかねますのでご了承ください。</li>
+						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします。</li>
 					</ul>
 
 					<h3 class="notes-label">費用：</h3>
@@ -410,15 +410,18 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			/* 文字階層：特大数字（strong）→ 大きめ太字（.u-em）→ 平文（dd）→ 注釈（small） */
-			/* 見出しチップと本文は縦積み（本文に全幅を使う） */
 			.guide {
-				padding: 1rem 0.9rem 1.1rem;
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.6rem 0.6rem;
+				/* 下余白は吹き出しのはみ出しぶんを含む */
+				padding: 1rem 0.75rem 5.9rem;
+				align-items: start;
 				line-height: 1.6;
 			}
 
 			.guide dt {
-				width: fit-content;
-				padding: 0.1rem 0.6rem;
+				padding: 0.1rem 0.45rem;
 				background: var(--c-green);
 				border-radius: 0.35rem;
 				color: #fff;
@@ -426,14 +429,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-weight: 700;
 				text-align: center;
 				white-space: nowrap;
-			}
-
-			.guide dt:not(:first-child) {
-				margin-top: 0.9rem;
-			}
-
-			.guide dd {
-				margin-top: 0.25rem;
+				margin-top: 0.2rem;
 			}
 
 			.guide dd {
@@ -497,12 +493,12 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: block;
 			}
 
-			/* 吹き出し：最小12pxルールのため、リスト下・右寄せ配置 */
+			/* 吹き出し：カード右下アンカー（ゴミ袋行の右の空きに重ね、カード下端へ少しはみ出す） */
 			.guide-bubble {
-				position: relative;
-				display: block;
-				margin: 0.4rem -1rem 0 auto;
-				width: 7.8rem;
+				position: absolute;
+				right: -1.7rem;
+				top: calc(100% - 0.9rem);
+				width: 9rem;
 				aspect-ratio: 100 / 70;
 			}
 
@@ -518,7 +514,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				inset: 0;
 				display: grid;
 				place-content: center;
-				padding-left: 0.5rem;
+				padding-left: 0.7rem;
 				font-size: max(12px, 0.78rem);
 				font-weight: 700;
 				line-height: 1.55;
