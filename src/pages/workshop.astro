@@ -390,12 +390,13 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				z-index: 2;
 			}
 
-			/* カード右下からはみ出すパラシュート */
+			/* カード右下からはみ出すパラシュート（隣のカードより手前） */
 			.schedule-parachute {
 				position: absolute;
 				right: -0.5rem;
 				bottom: -0.5rem;
 				width: 4rem;
+				z-index: 2;
 			}
 
 			/* 文字階層：特大数字（strong）→ 大きめ太字（.u-em）→ 平文（dd）→ 注釈（small） */
@@ -687,10 +688,16 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					font-size: clamp(12px, 2.9cqw, 18px);
 				}
 
-				/* 写真：ズームをやめてワイドにトリミング */
+				/* 写真：ヒーロー全面を覆う（背景色を見せない） */
+				.hero {
+					padding-bottom: 12rem;
+				}
+
 				.hero-photo {
-					margin-top: -18rem;
-					height: min(60vw, 30rem);
+					position: absolute;
+					inset: 0;
+					margin-top: 0;
+					height: 100%;
 				}
 
 				.hero-photoImg {
