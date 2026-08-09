@@ -62,10 +62,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						<dt>15:30</dt><dd>パラバルーンあそび お披露目</dd>
 						<dt>16:00</dt><dd>お片付け</dd>
 					</dl>
-					<ul class="schedule-notes">
-						<li>スケジュールは変更になる場合があります。</li>
-						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします。</li>
-					</ul>
 					<p class="schedule-bubble">
 						<span style={`background-image: url(${asset("assets/imgs/workshop/sec1-2.svg")});`}>お土産パラシュートがあるよ</span>
 					</p>
@@ -159,6 +155,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				<div class="notes-inner">
 					<h2 class="notes-ttl" id="notes-ttl">ご注意事項</h2>
 
+					<h3 class="notes-label">当日の流れ：</h3>
+					<ul>
+						<li>スケジュールは変更になる場合があります。</li>
+						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします。</li>
+						<li>未就学児の保護者の方は、30〜60分ごとにお子様の様子を見に来てください。</li>
+						<li>ゴミの持ち帰りにご協力ください。</li>
+					</ul>
+
 					<h3 class="notes-label">費用：</h3>
 					<ul>
 						<li>参加費にはレクリエーション保険、資材、ボランティアスタッフの交通費などの諸経費が含まれます。</li>
@@ -176,11 +180,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						<li>保護者から離れられないなど、お子様だけでの参加が難しい場合は、参加をお断りすることがあります。そのことによる責任は負いかねますのでご了承ください。</li>
 					</ul>
 
-					<h3 class="notes-label">当日のお願い：</h3>
-					<ul>
-						<li>未就学児の保護者の方は、30〜60分ごとにお子様の様子を見に来てください。</li>
-						<li>ゴミの持ち帰りにご協力ください。</li>
-					</ul>
 				</div>
 			</section>
 		</main>
@@ -384,26 +383,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				background: no-repeat center / 100% 100%;
 				font-size: 0.82rem;
 				font-weight: 700;
-			}
-
-			/* スケジュール下の注記 */
-			.schedule-notes {
-				padding: 0.4rem 1rem 0;
-				list-style: none;
-			}
-
-			.schedule-notes li {
-				position: relative;
-				padding-left: 1.3em;
-				font-size: max(12px, 0.78rem);
-				font-weight: 500;
-				line-height: 1.7;
-			}
-
-			.schedule-notes li::before {
-				content: "※";
-				position: absolute;
-				left: 0;
 			}
 
 			/* パラシュートに向く吹き出しのしっぽ（SVGはしっぽ無しピルのためCSSで付与） */
