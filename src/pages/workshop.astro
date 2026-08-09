@@ -48,10 +48,13 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					</p>
 				</div>
 
-				<p class="hero-limited" data-parallax="-0.18">同窓会<br />参加者限定</p>
+				<p class="hero-limited" style={`background-image: url(${asset("assets/imgs/workshop/hero-5.svg")});`} data-parallax="-0.18">
+					同窓会<br />参加者限定
+				</p>
 			</div>
 
 			<div class="hero-photo" data-parallax="0.06">
+				<img class="hero-fade" src={asset("assets/imgs/workshop/hero-bg-grad.svg")} alt="" />
 				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="-0.12" />
 				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@2x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1195" height="1109" />
 			</div>
@@ -59,70 +62,102 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 		<main>
 			<div class="cards">
-				<section class="card" aria-labelledby="schedule-ttl">
+				<section class="card card--schedule" aria-labelledby="schedule-ttl">
+					<img class="schedule-spark" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" />
 					<h2 class="card-ttl card-ttl--red" id="schedule-ttl">当日の流れ ( 予定 )</h2>
 					<dl class="schedule">
-						<dt>13:30〜</dt><dd>受付開始</dd>
-						<dt>14:00〜</dt><dd>ご挨拶　イントロ　ウォーミングアップ</dd>
-						<dt>14:40〜</dt><dd>パラバルーンあそび</dd>
-						<dt>15:00〜</dt><dd>休憩 10分</dd>
-						<dt>15:15〜</dt><dd>パラバルーンあそび　音楽に合わせて</dd>
-						<dt>15:25〜</dt><dd>休憩 5分</dd>
-						<dt>15:30〜</dt><dd>パラバルーンあそびお披露目</dd>
-						<dt>16:00〜</dt><dd>お片づけ、お迎えまであそび</dd>
+						<dt>13:30 〜</dt><dd>受付開始</dd>
+						<dt>14:00 〜</dt><dd>ご挨拶　イントロ　ウォーミングアップ</dd>
+						<dt>14:40 〜</dt><dd>パラバルーンあそび</dd>
+						<dt>15:00 〜</dt><dd>休憩 10分</dd>
+						<dt>15:15 〜</dt><dd>パラバルーンあそび　音楽に合わせて</dd>
+						<dt>15:25 〜</dt><dd>休憩 5分</dd>
+						<dt>15:30 〜</dt><dd>パラバルーンあそびお披露目</dd>
+						<dt>16:00 〜</dt><dd>お片づけ、お迎えまであそび</dd>
 					</dl>
 					<p class="schedule-bubble">
-						<span>お土産パラシュートがあるよ</span>
-						<img src={asset("assets/imgs/workshop/sec1-1.svg")} alt="" width="90" height="102" />
+						<span style={`background-image: url(${asset("assets/imgs/workshop/sec1-2.svg")});`}>お土産パラシュートがあるよ</span>
 					</p>
+					<img class="schedule-parachute" src={asset("assets/imgs/workshop/sec1-1.svg")} alt="" width="90" height="102" />
 				</section>
 
 				<section class="card" aria-labelledby="guide-ttl">
 					<h2 class="card-ttl card-ttl--green" id="guide-ttl">ご利用案内</h2>
 					<dl class="guide">
 						<dt>会 場</dt>
-						<dd>武蔵野美術大学　課外センター<small>（鷹の台ホール隣）</small></dd>
+						<dd>
+							武蔵野美術大学　課外センター
+							<small class="u-right">（鷹の台ホール隣）</small>
+						</dd>
 						<dt>参加費</dt>
 						<dd>
 							お子様一人<strong> 1,500円 </strong><em class="u-red">※現金のみ</em><br />
 							<small>※保護者の参加もOK！参加無料。</small>
 						</dd>
 						<dt>対象年齢</dt>
-						<dd>
+						<dd class="guide-age">
 							<strong>2歳〜</strong>
 							<small>※2歳未満でも、保護者と離れて過ごせるお子さんはご相談ください。</small>
 						</dd>
 						<dt>持ち物</dt>
-						<dd>
-							水筒、おやつ<small>（休憩で食べられるもの）</small>、ハンカチ、ティッシュ、着替え・オムツ<small>（必要に応じて）</small>、ゴミ袋<small>（ゴミ持ち帰り用）</small>
+						<dd class="guide-items">
+							<span class="guide-itemsText">
+								水筒、おやつ<small>（休憩で食べられるもの）</small>、ハンカチ、ティッシュ、着替え・オムツ<small>（必要に応じて）</small>、ゴミ袋<small>（ゴミ持ち帰り用）</small>
+							</span>
+							<span class="guide-bubble" role="note">
+								<svg viewBox="0 0 100 70" aria-hidden="true" preserveAspectRatio="none">
+									<defs>
+										<filter id="bubble-shadow" x="-20%" y="-20%" width="150%" height="150%">
+											<feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#231815" flood-opacity="0.35" />
+										</filter>
+									</defs>
+									<path
+										fill="#f4c61b"
+										filter="url(#bubble-shadow)"
+										d="M72.78,6.1H28.68c-8.56,0-15.49,6.94-15.49,15.49v8.33l-7.23.43,7.23,5.34v6.83c0,8.56,6.94,15.49,15.49,15.49h44.1c8.56,0,15.49-6.94,15.49-15.49v-20.92c0-8.56-6.94-15.49-15.49-15.49Z"
+									/>
+								</svg>
+								<span class="guide-bubbleText">持ち物には<br />すべて記名を<br />お願いします</span>
+							</span>
 						</dd>
 					</dl>
-					<p class="guide-bubble">持ち物にはすべて記名をお願いします</p>
 				</section>
 			</div>
 
+			<p class="applyInline">
+				<a class="applyInline-btn" href={formUrl} target="_blank" rel="noopener noreferrer">お申込みはこちら</a>
+			</p>
+
 			<section class="hosts" aria-labelledby="hosts-ttl">
 				<div class="hosts-inner">
-				<h2 class="hosts-ttl" id="hosts-ttl">ワークショップ主催者</h2>
-				<div class="hosts-grid">
-					<article class="host">
-						<img class="host-img" src={asset("assets/imgs/workshop/sec2-1.svg")} alt="" width="119" height="88" />
-						<p class="host-grad">2006年視デ卒</p>
-						<h3 class="host-name">半澤菜穂子（だいちゃん）</h3>
-						<p class="host-desc">
-							現役こども園、保育園にてアトリエリスタとして働いているお先生。一日に最大40人の幼児と一斉にワークショップを行っている。ボーイスカウト、こどもワークショップの経験があり、乳児から中高生まで活動を行ってきた。
-						</p>
-					</article>
-					<article class="host">
-						<img class="host-img" src={asset("assets/imgs/workshop/sec2-2.svg")} alt="" width="119" height="88" />
-						<p class="host-grad">2008年視デ卒</p>
-						<h3 class="host-name">山崎佳奈（もりかな）</h3>
-						<p class="host-desc">
-							視デ卒業後保育士資格を取得。現役保育士。泣く子にも寄り添い動じない安心を作る先生。
-						</p>
-					</article>
-				</div>
-				<p class="hosts-bubble">他、保育士仲間、図工専科教員も<br />サポートします！</p>
+					<h2 class="hosts-ttl" id="hosts-ttl" style={`background-image: url(${asset("assets/imgs/workshop/sec2-ttl.svg")});`}>
+						ワークショップ<br />主催者
+					</h2>
+					<div class="hosts-grid">
+						<article class="host">
+							<img class="host-img" src={asset("assets/imgs/workshop/sec2-1@2x.png")} alt="" width="448" height="329" />
+							<div class="host-body">
+								<p class="host-grad">2006年視デ卒</p>
+								<h3 class="host-name">半澤菜穂子（だいちゃん）</h3>
+								<p class="host-desc">
+									現役こども園、保育園にてアトリエリスタとして働いているお先生。一日に最大40人の幼児と一斉にワークショップを行っている。ボーイスカウト、こどもワークショップの経験があり、乳児から中高生まで活動を行ってきた。
+								</p>
+							</div>
+						</article>
+						<article class="host">
+							<img class="host-img" src={asset("assets/imgs/workshop/sec2-2@2x.png")} alt="" width="381" height="329" />
+							<div class="host-body">
+								<p class="host-grad">2008年視デ卒</p>
+								<h3 class="host-name">山崎佳奈（もりかな）</h3>
+								<p class="host-desc">
+									視デ卒業後保育士資格を取得。現役保育士。泣く子にも寄り添い動じない安心を作る先生。
+								</p>
+							</div>
+						</article>
+					</div>
+					<p class="hosts-bubble" style={`--bubble-circle: url(${asset("assets/imgs/workshop/sec2-3.svg")});`}>
+						<span>他、保育士仲間、図工専科教員も<br />サポートします！</span>
+					</p>
 				</div>
 			</section>
 
@@ -154,6 +189,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				--c-cream: #fffaee;
 				--c-card: #ffffff;
 				--c-hosts-bg: #fcf2c2;
+				--shadow-card: 0.3rem 0.3rem 0.5rem rgba(35, 24, 21, 0.35);
 			}
 
 			* {
@@ -269,8 +305,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				place-content: center;
 				width: 5rem;
 				height: 5rem;
-				background: var(--c-yellow);
-				border-radius: 50%;
+				background: no-repeat center / 100% 100%;
 				color: #5e3b14;
 				font-size: 0.85rem;
 				font-weight: 900;
@@ -302,7 +337,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			.hero-deco--sparkWhite {
-				top: 2rem;
+				top: 42%;
 				left: 5%;
 				width: 3rem;
 			}
@@ -310,6 +345,17 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero-photo {
 				position: relative;
 				margin-top: -1.5rem;
+			}
+
+			/* 写真上端の白フェード（支給の hero-bg-grad.svg） */
+			.hero-fade {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 4.5rem;
+				object-fit: fill;
+				z-index: 2;
 			}
 
 			.hero-photoImg {
@@ -325,18 +371,19 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				margin: 0 auto;
 				padding: 1.5rem 1rem 0;
 				display: grid;
-				gap: 1.5rem;
+				gap: 1.75rem;
 			}
 
 			.card {
+				position: relative;
 				background: var(--c-card);
 				border-radius: 0.9rem;
-				overflow: hidden;
-				box-shadow: 0 0.15rem 0.4rem rgba(122, 82, 48, 0.1);
+				box-shadow: var(--shadow-card);
 			}
 
 			.card-ttl {
 				padding: 0.55rem 1rem;
+				border-radius: 0.9rem 0.9rem 0 0;
 				color: #fff;
 				font-size: 1.15rem;
 				font-weight: 900;
@@ -372,17 +419,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			.schedule-bubble {
 				display: flex;
-				align-items: center;
-				justify-content: flex-end;
-				gap: 0.5rem;
-				padding: 0 1.25rem 1rem;
+				justify-content: center;
+				padding: 0 5rem 1.25rem 1.25rem;
 			}
 
 			.schedule-bubble span {
 				position: relative;
-				padding: 0.2rem 1rem;
-				background: var(--c-yellow);
-				border-radius: 2rem;
+				padding: 0.2rem 1.1rem;
+				background: no-repeat center / 100% 100%;
 				font-size: 0.82rem;
 				font-weight: 700;
 			}
@@ -391,22 +435,34 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.schedule-bubble span::after {
 				content: "";
 				position: absolute;
-				right: -0.5rem;
-				top: 50%;
+				right: -0.4rem;
+				top: 55%;
 				border: 0.4rem solid transparent;
 				border-left-color: var(--c-yellow);
 				transform: translateY(-50%);
 			}
 
-			.schedule-bubble img {
-				width: 4rem;
+			/* カード右上・写真に重なる黄色いキラキラ */
+			.schedule-spark {
+				position: absolute;
+				top: -2.2rem;
+				right: 2%;
+				width: 3.6rem;
+			}
+
+			/* カード右下からはみ出すパラシュート */
+			.schedule-parachute {
+				position: absolute;
+				right: -0.5rem;
+				bottom: -0.75rem;
+				width: 4.2rem;
 			}
 
 			.guide {
 				display: grid;
 				grid-template-columns: auto 1fr;
-				gap: 0.9rem 0.9rem;
-				padding: 1.25rem;
+				gap: 1rem 0.9rem;
+				padding: 1.25rem 1.25rem 1.5rem;
 				align-items: start;
 			}
 
@@ -423,6 +479,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			.guide dd {
+				font-size: 0.95rem;
 				font-weight: 700;
 			}
 
@@ -432,9 +489,15 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-weight: 500;
 			}
 
+			.u-right {
+				display: block;
+				text-align: right;
+			}
+
 			.guide strong {
 				font-size: 1.2rem;
 				font-weight: 900;
+				white-space: nowrap;
 			}
 
 			.u-red {
@@ -444,32 +507,87 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				white-space: nowrap;
 			}
 
-			.guide-bubble {
-				position: relative;
-				width: fit-content;
-				margin: 0.4rem 1.25rem 1.25rem auto;
-				padding: 0.35rem 1.1rem;
-				background: var(--c-yellow);
-				border-radius: 1.2rem;
-				font-size: 0.82rem;
-				font-weight: 700;
+			/* 2歳〜 と注記を横並びに */
+			.guide-age {
+				display: flex;
+				align-items: center;
+				gap: 0.7rem;
 			}
 
-			/* 持ち物リストに向くしっぽ */
-			.guide-bubble::before {
-				content: "";
+			.guide-age small {
+				line-height: 1.6;
+			}
+
+			/* 持ち物リスト＋右に重なる記名吹き出し */
+			.guide-items {
+				position: relative;
+				display: block;
+				padding-right: 0.5rem;
+			}
+
+			.guide-itemsText {
+				display: block;
+				width: 60%;
+				font-size: 0.85rem;
+			}
+
+			.guide-bubble {
 				position: absolute;
-				top: -0.55rem;
-				left: 1.6rem;
-				border: 0.45rem solid transparent;
-				border-bottom-color: var(--c-yellow);
-				border-top-width: 0;
+				right: -2rem;
+				bottom: 0.4rem;
+				width: 7.5rem;
+				aspect-ratio: 100 / 70;
+			}
+
+			.guide-bubble svg {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.guide-bubbleText {
+				position: absolute;
+				inset: 0;
+				display: grid;
+				place-content: center;
+				padding-left: 0.6rem;
+				font-size: 0.72rem;
+				font-weight: 700;
+				line-height: 1.7;
+				text-align: center;
+			}
+
+			/* ---------- 申込ボタン（本文中） ---------- */
+
+			.applyInline {
+				max-width: 30rem;
+				margin: 0 auto;
+				padding: 1.75rem 1rem;
+			}
+
+			.applyInline-btn {
+				display: block;
+				padding: 1rem;
+				background: var(--c-pink);
+				border-radius: 1.1rem;
+				box-shadow: var(--shadow-card);
+				color: #fff;
+				font-size: 1.35rem;
+				font-weight: 900;
+				letter-spacing: 0.08em;
+				text-align: center;
+				text-decoration: none;
+			}
+
+			.applyInline-btn::after {
+				content: " ＞";
+				font-size: 1.1rem;
 			}
 
 			/* ---------- Hosts ---------- */
 
 			.hosts {
-				margin-top: 2rem;
 				padding: 1.5rem 1rem 1.75rem;
 				background: var(--c-hosts-bg);
 			}
@@ -479,77 +597,56 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				margin: 0 auto;
 			}
 
+			/* 支給のリボンSVGを背景に */
 			.hosts-ttl {
-				position: relative;
-				width: fit-content;
-				padding: 0.3rem 1.3rem;
-				background: var(--c-brown);
+				width: 8.5rem;
+				padding: 0.8rem 0 1.1rem;
+				background: no-repeat center / 100% 100%;
 				color: #fff;
-				font-size: 0.95rem;
+				font-size: 0.9rem;
 				font-weight: 700;
-				transform: rotate(-3deg);
-				clip-path: polygon(2% 8%, 100% 0%, 98% 92%, 0% 100%);
+				line-height: 1.5;
+				text-align: center;
 			}
 
 			.hosts-grid {
 				display: grid;
-				gap: 1.5rem;
-				margin-top: 1.25rem;
-			}
-
-			.host {
-				display: grid;
-				grid-template-columns: 7rem 1fr;
-				gap: 0.2rem 1rem;
-				align-items: start;
+				gap: 2rem;
+				margin-top: 0.5rem;
 			}
 
 			.host-img {
-				grid-row: 1 / 4;
-				width: 100%;
+				display: block;
+				width: 58%;
+				margin: 0 auto;
 			}
 
 			.host-grad {
-				color: var(--c-brown);
-				font-size: 0.8rem;
-			}
-
-			.host-name {
-				color: var(--c-brown);
-				font-size: 1.05rem;
-				font-weight: 900;
-				border-bottom: 2px solid var(--c-brown);
-				width: fit-content;
-				padding-bottom: 0.1rem;
-			}
-
-			.host-desc {
-				margin-top: 0.4rem;
+				margin-top: 0.5rem;
 				font-size: 0.85rem;
 			}
 
+			.host-name {
+				font-size: 1.15rem;
+				font-weight: 900;
+				border-bottom: 1.5px solid var(--c-text);
+				padding-bottom: 0.15rem;
+			}
+
+			.host-desc {
+				margin-top: 0.5rem;
+				font-size: 0.9rem;
+			}
+
 			.hosts-bubble {
-				position: relative;
 				width: fit-content;
-				margin: 1.25rem auto 0;
-				padding: 0.9rem 1.6rem;
+				margin: 1.5rem auto 0;
+				padding: 0.9rem 1.9rem;
 				background: #fff;
-				border-radius: 2rem;
-				box-shadow: 0 0.15rem 0.4rem rgba(122, 82, 48, 0.15);
+				border-radius: 2.2rem;
 				font-size: 0.9rem;
 				font-weight: 700;
 				text-align: center;
-			}
-
-			/* 主催者イラストに向くしっぽ */
-			.hosts-bubble::before {
-				content: "";
-				position: absolute;
-				top: -0.6rem;
-				left: 2.2rem;
-				border: 0.5rem solid transparent;
-				border-bottom-color: #fff;
-				border-top-width: 0;
 			}
 
 			/* ---------- Notes ---------- */
@@ -577,7 +674,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				left: 0;
 			}
 
-			/* ---------- CTA ---------- */
+			/* ---------- CTA（固定） ---------- */
 
 			.cta {
 				position: fixed;
@@ -586,7 +683,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				right: 0;
 				bottom: 0;
 				padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-				background: rgba(255, 253, 244, 0.92);
+				background: rgba(255, 250, 238, 0.92);
 				box-shadow: 0 -0.15rem 0.5rem rgba(122, 82, 48, 0.15);
 			}
 
@@ -644,6 +741,10 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					font-size: 1rem;
 				}
 
+				.hero-fade {
+					height: 6.5rem;
+				}
+
 				.hero-photoImg {
 					max-height: 30rem;
 					object-position: center 72%;
@@ -656,13 +757,50 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					padding-top: 2.5rem;
 				}
 
+				.applyInline {
+					max-width: 30rem;
+					padding: 2.25rem 1rem;
+				}
+
 				.hosts-inner {
 					max-width: 64rem;
 				}
 
 				.hosts-grid {
 					grid-template-columns: 1fr 1fr;
-					gap: 2rem;
+					gap: 2.5rem;
+					margin-top: 1rem;
+				}
+
+				/* PC（A4版）はイラスト左・テキスト右 */
+				.host {
+					display: grid;
+					grid-template-columns: 10rem 1fr;
+					gap: 1rem;
+					align-items: start;
+				}
+
+				.host-img {
+					width: 100%;
+					margin: 0;
+				}
+
+				.host-grad {
+					margin-top: 0;
+				}
+
+				/* PC（A4版）は白丸の吹き出し */
+				.hosts-bubble {
+					background: var(--bubble-circle) no-repeat center / 100% 100%;
+					width: 11.5rem;
+					height: 11.5rem;
+					display: grid;
+					place-content: center;
+					padding: 1.5rem;
+					border-radius: 0;
+					margin-top: -3rem;
+					margin-right: 2rem;
+					margin-left: auto;
 				}
 
 				.notes ul {
@@ -693,6 +831,18 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 		</style>
 
 		<script is:inline>
+			// 本文中の申込ボタンが見えている間は固定CTAを隠す
+			(function () {
+				var cta = document.querySelector(".cta");
+				var inlineBtn = document.querySelector(".applyInline");
+				if (!("IntersectionObserver" in window) || !cta || !inlineBtn) return;
+				new IntersectionObserver(function (entries) {
+					cta.style.opacity = entries[0].isIntersecting ? "0" : "1";
+					cta.style.pointerEvents = entries[0].isIntersecting ? "none" : "auto";
+					cta.style.transition = "opacity 0.25s";
+				}).observe(inlineBtn);
+			})();
+
 			(function () {
 				var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 				if (reduce) return;
