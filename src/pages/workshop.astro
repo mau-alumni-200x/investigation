@@ -24,7 +24,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 	</head>
 	<body>
 		<header class="hero">
-			<p class="hero-topBadge">ムサビ卒の現役保育士＆アトリエリスタによる<br />ワークショップ</p>
+			<p class="hero-topBadge">ムサビ卒の<br />現役保育士＆アトリエリスタによる<br />ワークショップ</p>
 
 			<div class="hero-stage">
 				<img class="hero-deco hero-deco--stars" src={asset("assets/imgs/workshop/hero-1.svg")} alt="" data-parallax="-0.22" />
@@ -228,7 +228,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero {
 				position: relative;
 				overflow: hidden;
-				background: linear-gradient(175deg, #c9a061 0%, #e8cf9c 34%, #f7ecd2 60%, #fdf8e9 100%);
+				background: linear-gradient(175deg, #dcae76 0%, #e8cf9c 34%, #f7ecd2 60%, #fdf8e9 100%);
 			}
 
 			.hero-topBadge {
@@ -251,14 +251,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				z-index: 2;
 				max-width: 30rem;
 				margin: 0 auto;
-				padding: 0.75rem 1.25rem 0;
+				padding: 0.75rem 0 0;
 			}
 
 			/* 白い雲（デザイン支給のSVGを背景に敷く。mobile/desktopで形が異なる） */
 			.hero-cloud {
 				position: relative;
 				margin-top: 2.5rem;
-				padding: 2rem 1.4rem;
+				padding: 2rem 1.5rem;
 				aspect-ratio: 374.22 / 326.23;
 				display: flex;
 				flex-direction: column;
@@ -271,16 +271,16 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero-kozure {
 				position: absolute;
 				top: -1.9rem;
-				left: 4%;
+				left: 50%;
 				width: 9.5rem;
-				transform: rotate(-6deg);
+				transform: translateX(-58%);
 				z-index: 2;
 			}
 
 			.hero-date {
 				position: absolute;
-				top: -1.4rem;
-				right: 2%;
+				top: -1.9rem;
+				right: 6%;
 				width: 5rem;
 				z-index: 2;
 			}
@@ -298,8 +298,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			.hero-limited {
 				position: absolute;
-				top: 6.2rem;
-				left: 0.4rem;
+				top: 0.6rem;
+				left: 2%;
 				z-index: 3;
 				display: grid;
 				place-content: center;
@@ -319,14 +319,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			.hero-deco--stars {
-				top: 0.5rem;
-				left: 4%;
+				top: -3.2rem;
+				left: 3%;
 				width: 6rem;
 			}
 
 			.hero-deco--note {
-				top: 1rem;
-				right: 5%;
+				top: -3rem;
+				right: 4%;
 				width: 2.6rem;
 			}
 
@@ -337,14 +337,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			.hero-deco--sparkWhite {
-				top: 42%;
+				top: 70%;
 				left: 5%;
 				width: 3rem;
 			}
 
 			.hero-photo {
 				position: relative;
-				margin-top: -1.5rem;
+				margin-top: -2.5rem;
 			}
 
 			/* 写真上端の白フェード（支給の hero-bg-grad.svg） */
@@ -361,7 +361,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero-photoImg {
 				display: block;
 				width: 100%;
+				height: 75vw;
 				object-fit: cover;
+				object-position: center 55%;
 			}
 
 			/* ---------- Cards ---------- */
