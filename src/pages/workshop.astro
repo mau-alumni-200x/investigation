@@ -31,7 +31,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				<img class="hero-deco hero-deco--note" src={asset("assets/imgs/workshop/hero-2.svg")} alt="" data-parallax="-0.14" />
 				<img class="hero-deco hero-deco--spark" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" data-parallax="-0.3" />
 
-				<div class="hero-cloud" data-parallax="-0.08">
+				<div
+					class="hero-cloud"
+					data-parallax="-0.08"
+					style={`--cloud-m: url(${asset("assets/imgs/workshop/hero-ttl-bg-mobile.svg")}); --cloud-d: url(${asset("assets/imgs/workshop/hero-ttl-bg-desktop.svg")});`}
+				>
 					<img class="hero-kozure" src={asset("assets/imgs/workshop/hero-ttl-2.svg")} alt="子連れで！" />
 					<img class="hero-date" src={asset("assets/imgs/workshop/hero-ttl-3.svg")} alt="11月28日" />
 					<h1 class="hero-title">
@@ -209,38 +213,18 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				padding: 0.75rem 1.25rem 0;
 			}
 
-			/* 白い雲（CSS近似・レビュー用） */
+			/* 白い雲（デザイン支給のSVGを背景に敷く。mobile/desktopで形が異なる） */
 			.hero-cloud {
 				position: relative;
 				margin-top: 2.5rem;
-				padding: 2.25rem 1.25rem 1.5rem;
-				background: #fff;
-				border-radius: 48% 52% 46% 54% / 30% 34% 28% 32%;
+				padding: 2rem 1.4rem;
+				aspect-ratio: 374.22 / 326.23;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				background: var(--cloud-m) no-repeat center / 100% 100%;
 				filter: drop-shadow(0 0.25rem 0.5rem rgba(122, 82, 48, 0.12));
 				text-align: center;
-			}
-
-			.hero-cloud::before,
-			.hero-cloud::after {
-				content: "";
-				position: absolute;
-				z-index: -1;
-				background: #fff;
-				border-radius: 50%;
-			}
-
-			.hero-cloud::before {
-				width: 7rem;
-				height: 4.5rem;
-				top: -1.6rem;
-				left: 8%;
-			}
-
-			.hero-cloud::after {
-				width: 8.5rem;
-				height: 5rem;
-				top: -1.8rem;
-				right: 6%;
 			}
 
 			.hero-kozure {
@@ -587,7 +571,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				}
 
 				.hero-cloud {
-					padding: 3rem 3rem 2rem;
+					padding: 2.5rem 4rem;
+					aspect-ratio: 525.57 / 321.64;
+					background-image: var(--cloud-d);
 				}
 
 				.hero-title img {

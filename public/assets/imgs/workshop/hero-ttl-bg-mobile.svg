@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.22 326.23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="_背景" data-name="背景">
+    <g>
+      <circle class="cls-1" cx="89.23" cy="103.1" r="62.68"/>
+      <circle class="cls-1" cx="118.57" cy="227.76" r="62.68"/>
+      <circle class="cls-1" cx="183.95" cy="233.13" r="62.68"/>
+      <circle class="cls-1" cx="260.89" cy="226.97" r="62.68"/>
+      <g>
+        <circle class="cls-1" cx="62.68" cy="165.16" r="62.68"/>
+        <circle class="cls-1" cx="138.42" cy="61.91" r="61.91"/>
+        <circle class="cls-1" cx="96.04" cy="82.88" r="61.91"/>
+        <circle class="cls-1" cx="198.79" cy="67.96" r="61.91"/>
+        <circle class="cls-1" cx="274.04" cy="89.32" r="61.91"/>
+        <circle class="cls-1" cx="311.54" cy="154.76" r="62.68"/>
+        <circle class="cls-1" cx="263.53" cy="177.98" r="62.68"/>
+        <circle class="cls-1" cx="197.22" cy="163.17" r="62.68"/>
+        <circle class="cls-1" cx="134.54" cy="185.69" r="62.68"/>
+        <circle class="cls-1" cx="71.04" cy="235.63" r="62.68"/>
+        <circle class="cls-1" cx="115.53" cy="263.55" r="62.68"/>
+        <circle class="cls-1" cx="183.95" cy="263.55" r="62.68"/>
+        <circle class="cls-1" cx="254.45" cy="257.41" r="62.68"/>
+        <circle class="cls-1" cx="302.85" cy="240.66" r="62.68"/>
+      </g>
+    </g>
+  </g>
+</svg>
