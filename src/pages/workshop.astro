@@ -204,8 +204,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				color: var(--c-text);
 				background: var(--c-cream);
 				line-height: 1.8;
-				/* モバイルの固定CTAぶんの逃げ */
-				padding-bottom: 9rem;
 			}
 
 			img {
@@ -606,7 +604,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			/* ---------- Notes ---------- */
 
 			.notes {
-				padding: 1.75rem 1rem 2rem;
+				/* 下余白は固定CTAに隠れないぶんを含む（bodyへの指定はAstroのスコープ都合で効かない） */
+				padding: 1.75rem 1rem 9rem;
 			}
 
 			.notes ul {
@@ -661,8 +660,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			/* ---------- PC ---------- */
 
 			@media (min-width: 768px) {
-				body {
-					padding-bottom: 0;
+				.notes {
+					padding-bottom: 2rem;
 				}
 
 				/* PCレイアウトはモバイル確定後に改めて作る（暫定：タイトルはデザイン原寸のままセンター） */
