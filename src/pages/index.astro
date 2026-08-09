@@ -4,12 +4,9 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Content from "../components/Content.astro";
 import CTAButton from "../components/CTAButton.astro";
-import WorkshopBanner from "../components/WorkshopBanner.astro";
 
 // アンケートURL（後から指定）
 const surveyUrl = "https://forms.gle/X53jTDXTzjxH6Rej8";
-// お子さま向けワークショップの案内ページ
-const workshopUrl = `${import.meta.env.BASE_URL}/workshop/`;
 ---
 
 <Layout>
@@ -17,7 +14,6 @@ const workshopUrl = `${import.meta.env.BASE_URL}/workshop/`;
   <main>
     <Hero />
     <Content />
-    <WorkshopBanner href={workshopUrl} />
     <CTAButton href={surveyUrl} />
   </main>
 </Layout>
