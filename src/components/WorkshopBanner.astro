@@ -1,0 +1,34 @@
+---
+// Workshop banner - Link to the kids workshop page
+import { asset } from "../utils/paths.js";
+
+const { href = "#" } = Astro.props;
+---
+
+<div class="workshop-banner">
+  <a href={href} class="workshop-banner__link">
+    <img
+      src={asset("assets/imgs/workshop/worksho-bnr@2x.png")}
+      alt="子連れで！ムサビ同窓会を楽しもう お子さま向けワークショップのご案内"
+      width="769"
+      height="238"
+    />
+  </a>
+</div>
+
+<style>
+  .workshop-banner {
+    margin: 0 var(--spacing-32) var(--spacing-48);
+    text-align: center;
+  }
+
+  .workshop-banner__link {
+    display: inline-block;
+    max-width: 24rem;
+  }
+
+  .workshop-banner img {
+    width: 100%;
+    height: auto;
+  }
+</style>
