@@ -103,10 +103,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				</section>
 			</div>
 
-			<p class="applyInline">
-				<a class="applyInline-btn" href={formUrl} target="_blank" rel="noopener noreferrer">お申込みはこちら</a>
-			</p>
-
 			<section class="hosts" aria-labelledby="hosts-ttl">
 				<div class="hosts-inner">
 					<h2 class="hosts-ttl" id="hosts-ttl" style={`background-image: url(${asset("assets/imgs/workshop/sec2-ttl.svg")});`}>
@@ -512,33 +508,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				margin-top: -0.1rem;
 			}
 
-			/* ---------- 申込ボタン（本文中） ---------- */
-
-			.applyInline {
-				max-width: 30rem;
-				margin: 0 auto;
-				padding: 1rem 1rem 1.25rem;
-			}
-
-			.applyInline-btn {
-				display: block;
-				padding: 0.7rem;
-				background: var(--c-pink);
-				border-radius: 1.1rem;
-				box-shadow: var(--shadow-card);
-				color: #fff;
-				font-size: 1.25rem;
-				font-weight: 900;
-				letter-spacing: 0.08em;
-				text-align: center;
-				text-decoration: none;
-			}
-
-			.applyInline-btn::after {
-				content: " ＞";
-				font-size: 1.1rem;
-			}
-
 			/* ---------- Hosts ---------- */
 
 			.hosts {
@@ -565,7 +534,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			.hosts-ttl-text {
 				display: block;
-				transform: rotate(-4deg);
+				transform: rotate(-8deg);
 			}
 
 			.hosts-grid {
@@ -695,11 +664,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					padding-top: 2.5rem;
 				}
 
-				.applyInline {
-					max-width: 30rem;
-					padding: 2.25rem 1rem;
-				}
-
 				.hosts-inner {
 					max-width: 64rem;
 				}
@@ -769,18 +733,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 		</style>
 
 		<script is:inline>
-			// 本文中の申込ボタンが見えている間は固定CTAを隠す
-			(function () {
-				var cta = document.querySelector(".cta");
-				var inlineBtn = document.querySelector(".applyInline");
-				if (!("IntersectionObserver" in window) || !cta || !inlineBtn) return;
-				new IntersectionObserver(function (entries) {
-					cta.style.opacity = entries[0].isIntersecting ? "0" : "1";
-					cta.style.pointerEvents = entries[0].isIntersecting ? "none" : "auto";
-					cta.style.transition = "opacity 0.25s";
-				}).observe(inlineBtn);
-			})();
-
 			(function () {
 				var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 				if (reduce) return;
