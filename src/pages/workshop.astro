@@ -78,12 +78,12 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						</dd>
 						<dt>参加費</dt>
 						<dd>
-							お子様一人<strong> 1,500円 </strong><em class="u-red">※現金のみ</em><br />
+							お子様一人<strong> 1,500<span class="u-unit">円</span> </strong><em class="u-red">※現金のみ</em><br />
 							<small>※保護者の参加もOK！参加無料。</small>
 						</dd>
 						<dt>対象年齢</dt>
 						<dd class="guide-age">
-							<strong>2歳〜</strong>
+							<strong>2<span class="u-unit">歳〜</span></strong>
 							<small>※2歳未満でも、保護者と離れて過ごせるお子さんはご相談ください。</small>
 						</dd>
 						<dt>持ち物</dt>
@@ -242,9 +242,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				left: 0;
 				right: 0;
 				top: 76%;
-				/* タイトル（コンテナ）幅基準で固定。cqw非対応ブラウザはremにフォールバック */
+				/* タイトル（コンテナ）幅基準・最小12px。cqw非対応ブラウザはremにフォールバック */
 				font-size: 0.8rem;
-				font-size: 3.28cqw;
+				font-size: max(12px, 3.28cqw);
 				font-weight: 700;
 				line-height: 1.4;
 				text-align: center;
@@ -409,7 +409,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				background: var(--c-green);
 				border-radius: 0.35rem;
 				color: #fff;
-				font-size: 0.72rem;
+				font-size: max(12px, 0.78rem);
 				font-weight: 700;
 				text-align: center;
 				white-space: nowrap;
@@ -428,7 +428,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			.guide small {
 				display: inline-block;
-				font-size: 0.62rem;
+				font-size: max(12px, 0.78rem);
 				font-weight: 500;
 			}
 
@@ -443,10 +443,15 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				white-space: nowrap;
 			}
 
+			/* 単位（円・歳〜）は数字よりひとまわり小さく */
+			.guide strong .u-unit {
+				font-size: 0.95rem;
+			}
+
 			.u-red {
 				color: var(--c-red);
 				font-style: normal;
-				font-size: 0.75rem;
+				font-size: max(12px, 0.78rem);
 				white-space: nowrap;
 			}
 
@@ -472,12 +477,12 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: block;
 			}
 
-			/* 吹き出しは持ち物ブロック右側の空きに重ねる（1行目の下から・文字には重ねない） */
+			/* 吹き出し：最小12pxルールのため、リスト下・右寄せ配置 */
 			.guide-bubble {
-				position: absolute;
-				top: 1.9rem;
-				right: -2.4rem;
-				width: 6.2rem;
+				position: relative;
+				display: block;
+				margin: 0.4rem -1rem 0 auto;
+				width: 7.8rem;
 				aspect-ratio: 100 / 70;
 			}
 
@@ -494,20 +499,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: grid;
 				place-content: center;
 				padding-left: 0.5rem;
-				font-size: 0.64rem;
+				font-size: max(12px, 0.78rem);
 				font-weight: 700;
 				line-height: 1.55;
 				text-align: center;
 				white-space: nowrap;
-			}
-
-			/* 極小画面では吹き出しをリスト下に逃がす（文字との重なり防止） */
-			@media (max-width: 350px) {
-				.guide-bubble {
-					position: static;
-					display: block;
-					margin: 0.4rem 0 0 auto;
-				}
 			}
 
 			/* ---------- 申込ボタン（本文中） ---------- */
