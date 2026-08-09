@@ -222,9 +222,10 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero-lockup {
 				position: relative;
 				z-index: 2;
-				max-width: 30rem;
+				width: min(100%, 375px);
 				margin: 0 auto;
 				padding-top: 0.5rem;
+				container-type: inline-size;
 			}
 
 			.hero-lockupTtl img {
@@ -238,7 +239,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				left: 0;
 				right: 0;
 				top: 76%;
+				/* タイトル（コンテナ）幅基準で固定。cqw非対応ブラウザはremにフォールバック */
 				font-size: 0.8rem;
+				font-size: 3.28cqw;
 				font-weight: 700;
 				line-height: 1.4;
 				text-align: center;
@@ -626,10 +629,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					padding-bottom: 0;
 				}
 
-				/* PCレイアウトはモバイル確定後に改めて作る（暫定：センター寄せのまま） */
-				.hero-lockup {
-					max-width: 30rem;
-				}
+				/* PCレイアウトはモバイル確定後に改めて作る（暫定：タイトルはデザイン原寸のままセンター） */
 
 				.cards {
 					max-width: 64rem;
