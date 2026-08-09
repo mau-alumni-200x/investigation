@@ -1,0 +1,685 @@
+---
+import { asset } from "../utils/paths.js";
+
+// ワークショップ申込フォームURL（チラシのQR記載のもの・要確認）
+const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>子連れで！ムサビ同窓会を楽しもう | お子さま向けワークショップ 11/28</title>
+		<meta
+			name="description"
+			content="11/28 ムサビ同窓会の隣接会場でお子さま向けワークショップを開催。ムサビ卒の現役保育士＆アトリエリスタがお預かりします。"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="hero">
+			<p class="hero-topBadge">ムサビ卒の現役保育士＆アトリエリスタによる<br />ワークショップ</p>
+
+			<div class="hero-stage">
+				<img class="hero-deco hero-deco--stars" src={asset("assets/imgs/workshop/hero-1.svg")} alt="" data-parallax="-0.22" />
+				<img class="hero-deco hero-deco--note" src={asset("assets/imgs/workshop/hero-2.svg")} alt="" data-parallax="-0.14" />
+				<img class="hero-deco hero-deco--spark" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" data-parallax="-0.3" />
+
+				<div class="hero-cloud" data-parallax="-0.08">
+					<img class="hero-kozure" src={asset("assets/imgs/workshop/hero-ttl-2.svg")} alt="子連れで！" />
+					<img class="hero-date" src={asset("assets/imgs/workshop/hero-ttl-3.svg")} alt="11月28日" />
+					<h1 class="hero-title">
+						<img src={asset("assets/imgs/workshop/hero-ttl-1.svg")} alt="ムサビ同窓会を楽しもう" />
+					</h1>
+					<p class="hero-intro">
+						隣接会場でお子さま向けワークショップを開催！<br />
+						経験豊富なスタッフがお預かりしますので、<br />
+						安心して同窓会をお楽しみください。
+					</p>
+				</div>
+
+				<p class="hero-limited" data-parallax="-0.18">同窓会<br />参加者限定</p>
+			</div>
+
+			<div class="hero-photo" data-parallax="0.06">
+				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="-0.12" />
+				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@2x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1195" height="1109" />
+			</div>
+		</header>
+
+		<main>
+			<div class="cards">
+				<section class="card" aria-labelledby="schedule-ttl">
+					<h2 class="card-ttl card-ttl--red" id="schedule-ttl">当日の流れ ( 予定 )</h2>
+					<dl class="schedule">
+						<dt>13:30〜</dt><dd>受付開始</dd>
+						<dt>14:00〜</dt><dd>ご挨拶　イントロ　ウォーミングアップ</dd>
+						<dt>14:40〜</dt><dd>パラバルーンあそび</dd>
+						<dt>15:00〜</dt><dd>休憩 10分</dd>
+						<dt>15:15〜</dt><dd>パラバルーンあそび　音楽に合わせて</dd>
+						<dt>15:25〜</dt><dd>休憩 5分</dd>
+						<dt>15:30〜</dt><dd>パラバルーンあそびお披露目</dd>
+						<dt>16:00〜</dt><dd>お片づけ、お迎えまであそび</dd>
+					</dl>
+					<p class="schedule-bubble">
+						<span>お土産パラシュートがあるよ</span>
+						<img src={asset("assets/imgs/workshop/sec1-1.svg")} alt="" width="90" height="102" />
+					</p>
+				</section>
+
+				<section class="card" aria-labelledby="guide-ttl">
+					<h2 class="card-ttl card-ttl--green" id="guide-ttl">ご利用案内</h2>
+					<dl class="guide">
+						<dt>会 場</dt>
+						<dd>武蔵野美術大学　課外センター<small>（鷹の台ホール隣）</small></dd>
+						<dt>参加費</dt>
+						<dd>
+							お子様一人<strong> 1,500円 </strong><em class="u-red">※現金のみ</em><br />
+							<small>※保護者の参加もOK！参加無料。</small>
+						</dd>
+						<dt>対象年齢</dt>
+						<dd>
+							<strong>2歳〜</strong>
+							<small>※2歳未満でも、保護者と離れて過ごせるお子さんはご相談ください。</small>
+						</dd>
+						<dt>持ち物</dt>
+						<dd>
+							水筒、おやつ<small>（休憩で食べられるもの）</small>、ハンカチ、ティッシュ、着替え・オムツ<small>（必要に応じて）</small>、ゴミ袋<small>（ゴミ持ち帰り用）</small>
+						</dd>
+					</dl>
+					<p class="guide-bubble">持ち物にはすべて記名をお願いします</p>
+				</section>
+			</div>
+
+			<section class="hosts" aria-labelledby="hosts-ttl">
+				<h2 class="hosts-ttl" id="hosts-ttl">ワークショップ主催者</h2>
+				<div class="hosts-grid">
+					<article class="host">
+						<img class="host-img" src={asset("assets/imgs/workshop/sec2-1.svg")} alt="" width="119" height="88" />
+						<p class="host-grad">2006年視デ卒</p>
+						<h3 class="host-name">半澤菜穂子（だいちゃん）</h3>
+						<p class="host-desc">
+							現役こども園、保育園にてアトリエリスタとして働いているお先生。一日に最大40人の幼児と一斉にワークショップを行っている。ボーイスカウト、こどもワークショップの経験があり、乳児から中高生まで活動を行ってきた。
+						</p>
+					</article>
+					<article class="host">
+						<img class="host-img" src={asset("assets/imgs/workshop/sec2-2.svg")} alt="" width="119" height="88" />
+						<p class="host-grad">2008年視デ卒</p>
+						<h3 class="host-name">山崎佳奈（もりかな）</h3>
+						<p class="host-desc">
+							視デ卒業後保育士資格を取得。現役保育士。泣く子にも寄り添い動じない安心を作る先生。
+						</p>
+					</article>
+				</div>
+				<p class="hosts-bubble">他、保育士仲間、図工専科教員も<br />サポートします！</p>
+			</section>
+
+			<section class="notes" aria-label="注意事項">
+				<ul>
+					<li>参加費には、レクリエーション保険、お土産パラシュート、備品、スタッフへの交通費等含ませていただいております。</li>
+					<li>未就学児の保護者の方は、30〜60分ごとにお子さまの様子を見に来ていただけると幸いです。</li>
+					<li>2歳未満のお子さまや、保護者と離れることが難しい場合は、同窓会への参加が難しくなることがあります。</li>
+					<li>現役保育士・アトリエリスタが責任を持ってお子さまをお預かりします。安心してお任せください。</li>
+					<li>保護者の不安はお子さまに伝わります。当日は安心して送り出すお気持ちでお越しください。</li>
+					<li>お子さまが泣いたり離れられなかったことによる苦情・ご意見はご遠慮ください。</li>
+				</ul>
+			</section>
+		</main>
+
+		<div class="cta">
+			<a class="cta-btn" href={formUrl} target="_blank" rel="noopener noreferrer">お申込みはこちら</a>
+		</div>
+
+		<style>
+			:root {
+				--c-text: #3b2f21;
+				--c-red: #d95560;
+				--c-green: #56a05c;
+				--c-yellow: #f7ce4d;
+				--c-pink: #d96d93;
+				--c-brown: #7a5230;
+				--c-cream: #faf4dd;
+				--c-card: #fffdf4;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-size: calc(16px * 100vw / 390);
+			}
+
+			@media (min-width: 768px) {
+				html {
+					font-size: 16px;
+				}
+			}
+
+			body {
+				font-family: "Zen Kaku Gothic New", sans-serif;
+				font-weight: 500;
+				color: var(--c-text);
+				background: var(--c-cream);
+				line-height: 1.8;
+				/* モバイルの固定CTAぶんの逃げ */
+				padding-bottom: 7rem;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			/* ---------- Hero ---------- */
+
+			.hero {
+				position: relative;
+				overflow: hidden;
+				background: linear-gradient(175deg, #c9a061 0%, #e8cf9c 34%, #f7ecd2 60%, #fdf8e9 100%);
+			}
+
+			.hero-topBadge {
+				position: relative;
+				z-index: 3;
+				width: fit-content;
+				margin: 1.25rem auto 0;
+				padding: 0.4rem 1.4rem;
+				background: #fff;
+				border-radius: 2rem;
+				font-size: 0.8rem;
+				font-weight: 700;
+				text-align: center;
+				line-height: 1.6;
+			}
+
+			.hero-stage {
+				position: relative;
+				z-index: 2;
+				max-width: 30rem;
+				margin: 0 auto;
+				padding: 0.75rem 1.25rem 0;
+			}
+
+			/* 白い雲（CSS近似・レビュー用） */
+			.hero-cloud {
+				position: relative;
+				margin-top: 2.5rem;
+				padding: 2.25rem 1.25rem 1.5rem;
+				background: #fff;
+				border-radius: 48% 52% 46% 54% / 30% 34% 28% 32%;
+				filter: drop-shadow(0 0.25rem 0.5rem rgba(122, 82, 48, 0.12));
+				text-align: center;
+			}
+
+			.hero-cloud::before,
+			.hero-cloud::after {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				background: #fff;
+				border-radius: 50%;
+			}
+
+			.hero-cloud::before {
+				width: 7rem;
+				height: 4.5rem;
+				top: -1.6rem;
+				left: 8%;
+			}
+
+			.hero-cloud::after {
+				width: 8.5rem;
+				height: 5rem;
+				top: -1.8rem;
+				right: 6%;
+			}
+
+			.hero-kozure {
+				position: absolute;
+				top: -1.9rem;
+				left: 4%;
+				width: 9.5rem;
+				transform: rotate(-6deg);
+				z-index: 2;
+			}
+
+			.hero-date {
+				position: absolute;
+				top: -1.4rem;
+				right: 2%;
+				width: 5rem;
+				z-index: 2;
+			}
+
+			.hero-title img {
+				width: 88%;
+				margin-left: auto;
+			}
+
+			.hero-intro {
+				margin-top: 1rem;
+				font-size: 0.82rem;
+				font-weight: 700;
+			}
+
+			.hero-limited {
+				position: absolute;
+				top: 6.2rem;
+				left: 0.4rem;
+				z-index: 3;
+				display: grid;
+				place-content: center;
+				width: 5rem;
+				height: 5rem;
+				background: var(--c-yellow);
+				border-radius: 50%;
+				font-size: 0.85rem;
+				font-weight: 900;
+				text-align: center;
+				line-height: 1.5;
+			}
+
+			.hero-deco {
+				position: absolute;
+				z-index: 3;
+			}
+
+			.hero-deco--stars {
+				top: 0.5rem;
+				left: 4%;
+				width: 6rem;
+			}
+
+			.hero-deco--note {
+				top: 1rem;
+				right: 5%;
+				width: 2.6rem;
+			}
+
+			.hero-deco--spark {
+				top: 16rem;
+				right: 2%;
+				width: 3.4rem;
+			}
+
+			.hero-deco--sparkWhite {
+				top: 2rem;
+				left: 5%;
+				width: 3rem;
+			}
+
+			.hero-photo {
+				position: relative;
+				margin-top: -1.5rem;
+			}
+
+			.hero-photoImg {
+				display: block;
+				width: 100%;
+				object-fit: cover;
+			}
+
+			/* ---------- Cards ---------- */
+
+			.cards {
+				max-width: 30rem;
+				margin: 0 auto;
+				padding: 1.5rem 1rem 0;
+				display: grid;
+				gap: 1.5rem;
+			}
+
+			.card {
+				background: var(--c-card);
+				border-radius: 0.9rem;
+				overflow: hidden;
+				box-shadow: 0 0.15rem 0.4rem rgba(122, 82, 48, 0.1);
+			}
+
+			.card-ttl {
+				padding: 0.55rem 1rem;
+				color: #fff;
+				font-size: 1.15rem;
+				font-weight: 900;
+				text-align: center;
+				letter-spacing: 0.05em;
+			}
+
+			.card-ttl--red {
+				background: var(--c-red);
+			}
+
+			.card-ttl--green {
+				background: var(--c-green);
+			}
+
+			.schedule {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.35rem 0.9rem;
+				padding: 1.25rem 1.25rem 0.5rem;
+			}
+
+			.schedule dt {
+				color: var(--c-red);
+				font-weight: 900;
+				font-size: 1.05rem;
+			}
+
+			.schedule dd {
+				font-weight: 700;
+				align-self: center;
+			}
+
+			.schedule-bubble {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 0.5rem;
+				padding: 0 1.25rem 1rem;
+			}
+
+			.schedule-bubble span {
+				padding: 0.2rem 1rem;
+				background: var(--c-yellow);
+				border-radius: 2rem;
+				font-size: 0.82rem;
+				font-weight: 700;
+			}
+
+			.schedule-bubble img {
+				width: 4rem;
+			}
+
+			.guide {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.9rem 0.9rem;
+				padding: 1.25rem;
+				align-items: start;
+			}
+
+			.guide dt {
+				padding: 0.15rem 0.6rem;
+				background: var(--c-green);
+				border-radius: 0.35rem;
+				color: #fff;
+				font-size: 0.8rem;
+				font-weight: 700;
+				text-align: center;
+				white-space: nowrap;
+				margin-top: 0.2rem;
+			}
+
+			.guide dd {
+				font-weight: 700;
+			}
+
+			.guide small {
+				display: inline-block;
+				font-size: 0.78rem;
+				font-weight: 500;
+			}
+
+			.guide strong {
+				font-size: 1.2rem;
+				font-weight: 900;
+			}
+
+			.u-red {
+				color: var(--c-red);
+				font-style: normal;
+				font-size: 0.85rem;
+				white-space: nowrap;
+			}
+
+			.guide-bubble {
+				width: fit-content;
+				margin: 0 1.25rem 1.25rem auto;
+				padding: 0.35rem 1.1rem;
+				background: var(--c-yellow);
+				border-radius: 1.2rem 1.2rem 0.2rem 1.2rem;
+				font-size: 0.82rem;
+				font-weight: 700;
+			}
+
+			/* ---------- Hosts ---------- */
+
+			.hosts {
+				max-width: 30rem;
+				margin: 2rem auto 0;
+				padding: 0 1rem 1.5rem;
+			}
+
+			.hosts-ttl {
+				position: relative;
+				width: fit-content;
+				padding: 0.3rem 1.3rem;
+				background: var(--c-brown);
+				color: #fff;
+				font-size: 0.95rem;
+				font-weight: 700;
+				transform: rotate(-3deg);
+				clip-path: polygon(2% 8%, 100% 0%, 98% 92%, 0% 100%);
+			}
+
+			.hosts-grid {
+				display: grid;
+				gap: 1.5rem;
+				margin-top: 1.25rem;
+			}
+
+			.host {
+				display: grid;
+				grid-template-columns: 7rem 1fr;
+				gap: 0.2rem 1rem;
+				align-items: start;
+			}
+
+			.host-img {
+				grid-row: 1 / 4;
+				width: 100%;
+			}
+
+			.host-grad {
+				font-size: 0.8rem;
+			}
+
+			.host-name {
+				font-size: 1.05rem;
+				font-weight: 900;
+				border-bottom: 2px solid var(--c-text);
+				width: fit-content;
+				padding-bottom: 0.1rem;
+			}
+
+			.host-desc {
+				margin-top: 0.4rem;
+				font-size: 0.85rem;
+			}
+
+			.hosts-bubble {
+				width: fit-content;
+				margin: 1.25rem auto 0;
+				padding: 0.9rem 1.6rem;
+				background: #fff;
+				border-radius: 2rem;
+				box-shadow: 0 0.15rem 0.4rem rgba(122, 82, 48, 0.15);
+				font-size: 0.9rem;
+				font-weight: 700;
+				text-align: center;
+			}
+
+			/* ---------- Notes ---------- */
+
+			.notes {
+				background: #f3ecd2;
+				padding: 1.5rem 1rem 2rem;
+			}
+
+			.notes ul {
+				max-width: 30rem;
+				margin: 0 auto;
+				list-style: none;
+			}
+
+			.notes li {
+				position: relative;
+				padding-left: 1.4em;
+				font-size: 0.8rem;
+				line-height: 1.9;
+			}
+
+			.notes li::before {
+				content: "※";
+				position: absolute;
+				left: 0;
+			}
+
+			/* ---------- CTA ---------- */
+
+			.cta {
+				position: fixed;
+				z-index: 10;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+				background: rgba(255, 253, 244, 0.92);
+				box-shadow: 0 -0.15rem 0.5rem rgba(122, 82, 48, 0.15);
+			}
+
+			.cta-btn {
+				display: block;
+				padding: 0.8rem 1rem;
+				background: var(--c-pink);
+				border-radius: 2.5rem;
+				color: #fff;
+				font-size: 1.1rem;
+				font-weight: 900;
+				letter-spacing: 0.08em;
+				text-align: center;
+				text-decoration: none;
+			}
+
+			.cta-btn::after {
+				content: " »";
+			}
+
+			/* ---------- PC ---------- */
+
+			@media (min-width: 768px) {
+				body {
+					padding-bottom: 0;
+				}
+
+				.hero-stage {
+					max-width: 46rem;
+				}
+
+				.hero-cloud {
+					padding: 3rem 3rem 2rem;
+				}
+
+				.hero-title img {
+					max-width: 34rem;
+				}
+
+				.hero-intro {
+					font-size: 1.05rem;
+				}
+
+				.hero-limited {
+					width: 6.5rem;
+					height: 6.5rem;
+					top: 6rem;
+					left: 1.5rem;
+					font-size: 1rem;
+				}
+
+				.hero-photoImg {
+					max-height: 30rem;
+					object-position: center 72%;
+				}
+
+				.cards {
+					max-width: 64rem;
+					grid-template-columns: 1fr 1fr;
+					align-items: start;
+					padding-top: 2.5rem;
+				}
+
+				.hosts {
+					max-width: 64rem;
+				}
+
+				.hosts-grid {
+					grid-template-columns: 1fr 1fr;
+					gap: 2rem;
+				}
+
+				.notes ul {
+					max-width: 64rem;
+				}
+
+				.cta {
+					left: auto;
+					right: 1.5rem;
+					bottom: 1.5rem;
+					padding: 0;
+					background: none;
+					box-shadow: none;
+				}
+
+				.cta-btn {
+					padding: 1rem 2.2rem;
+					box-shadow: 0 0.25rem 0.75rem rgba(122, 82, 48, 0.3);
+				}
+			}
+
+			/* 動きを減らす設定のユーザーにはパララックスを無効化（JS側でも判定） */
+			@media (prefers-reduced-motion: reduce) {
+				[data-parallax] {
+					transform: none !important;
+				}
+			}
+		</style>
+
+		<script is:inline>
+			(function () {
+				var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+				if (reduce) return;
+				var els = document.querySelectorAll("[data-parallax]");
+				var ticking = false;
+				function update() {
+					var y = window.scrollY || window.pageYOffset;
+					for (var i = 0; i < els.length; i++) {
+						var s = parseFloat(els[i].getAttribute("data-parallax"));
+						els[i].style.transform = "translate3d(0," + y * s + "px,0)";
+					}
+					ticking = false;
+				}
+				window.addEventListener(
+					"scroll",
+					function () {
+						if (!ticking) {
+							requestAnimationFrame(update);
+							ticking = true;
+						}
+					},
+					{ passive: true }
+				);
+				update();
+			})();
+		</script>
+	</body>
+</html>
