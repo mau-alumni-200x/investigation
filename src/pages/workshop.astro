@@ -24,31 +24,19 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 	</head>
 	<body>
 		<header class="hero">
-			<p class="hero-topBadge">ムサビ卒の<br />現役保育士＆アトリエリスタによる<br />ワークショップ</p>
-
-			<div class="hero-stage">
-				<img class="hero-deco hero-deco--stars" src={asset("assets/imgs/workshop/hero-1.svg")} alt="" data-parallax="-0.22" />
-				<img class="hero-deco hero-deco--note" src={asset("assets/imgs/workshop/hero-2.svg")} alt="" data-parallax="-0.14" />
-
-				<div
-					class="hero-cloud"
-					data-parallax="-0.08"
-					style={`--cloud-m: url(${asset("assets/imgs/workshop/hero-ttl-bg-mobile.svg")}); --cloud-d: url(${asset("assets/imgs/workshop/hero-ttl-bg-desktop.svg")});`}
-				>
-					<img class="hero-kozure" src={asset("assets/imgs/workshop/hero-ttl-2.svg")} alt="子連れで！" />
-					<img class="hero-date" src={asset("assets/imgs/workshop/hero-ttl-3.svg")} alt="11月28日" />
-					<h1 class="hero-title">
-						<img src={asset("assets/imgs/workshop/hero-ttl-1.svg")} alt="ムサビ同窓会を楽しもう" />
-					</h1>
-					<p class="hero-intro">
-						隣接会場でお子さま向けワークショップを開催！<br />
-						経験豊富なスタッフがお預かりしますので、<br />
-						安心して同窓会をお楽しみください。
-					</p>
-				</div>
-
-				<p class="hero-limited" style={`background-image: url(${asset("assets/imgs/workshop/hero-5.svg")});`} data-parallax="-0.18">
-					同窓会<br />参加者限定
+			<div class="hero-lockup" data-parallax="-0.06">
+				<h1 class="hero-lockupTtl">
+					<img
+						src={asset("assets/imgs/workshop/ttl.svg")}
+						alt="ムサビ卒の現役保育士＆アトリエリスタによるワークショップ　同窓会参加者限定　子連れで！ムサビ同窓会を楽しもう　11月28日"
+						width="381.39"
+						height="399.3"
+					/>
+				</h1>
+				<p class="hero-intro">
+					隣接会場でお子さま向けワークショップを開催！<br />
+					経験豊富なスタッフがお預かりしますので、<br />
+					安心して同窓会をお楽しみください。
 				</p>
 			</div>
 
@@ -230,105 +218,34 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				background: linear-gradient(175deg, #dcae76 0%, #e8cf9c 34%, #f7ecd2 60%, #fdf8e9 100%);
 			}
 
-			.hero-topBadge {
-				position: relative;
-				z-index: 3;
-				width: fit-content;
-				margin: 0.8rem auto 0;
-				padding: 0.45rem 1.4rem;
-				background: #946134;
-				border-radius: 2rem;
-				color: #fff;
-				font-size: 0.88rem;
-				font-weight: 900;
-				text-align: center;
-				line-height: 1.65;
-			}
-
-			.hero-stage {
+			/* タイトル一式（デザイン合成済みSVG）＋リード文のみHTMLで重ねる */
+			.hero-lockup {
 				position: relative;
 				z-index: 2;
 				max-width: 30rem;
 				margin: 0 auto;
-				padding: 0;
 			}
 
-			/* 白い雲（デザイン支給のSVGを背景に敷く。mobile/desktopで形が異なる） */
-			.hero-cloud {
-				position: relative;
-				margin-top: -0.2rem;
-				padding: 2.5rem 1rem 2rem;
-				aspect-ratio: 374.22 / 326.23;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				background: var(--cloud-m) no-repeat center / 100% 100%;
-				filter: drop-shadow(0 0.25rem 0.5rem rgba(122, 82, 48, 0.12));
-				text-align: center;
-			}
-
-			.hero-kozure {
-				position: absolute;
-				top: 0.9rem;
-				left: 50%;
-				width: 9rem;
-				transform: translateX(-58%);
-				z-index: 2;
-			}
-
-			.hero-date {
-				position: absolute;
-				top: 1.6rem;
-				right: 20%;
-				width: 3.6rem;
-				z-index: 2;
-			}
-
-			.hero-title img {
+			.hero-lockupTtl img {
 				display: block;
-				width: 95%;
-				margin-left: auto;
+				width: 100%;
+				height: auto;
 			}
 
 			.hero-intro {
-				margin-top: 0.5rem;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 76%;
 				font-size: 0.8rem;
 				font-weight: 700;
 				line-height: 1.4;
-			}
-
-			.hero-limited {
-				position: absolute;
-				top: -0.35rem;
-				left: 1%;
-				z-index: 3;
-				display: grid;
-				place-content: center;
-				width: 4.2rem;
-				height: 4.2rem;
-				background: no-repeat center / 100% 100%;
-				color: #5e3b14;
-				font-size: 0.78rem;
-				font-weight: 900;
 				text-align: center;
-				line-height: 1.5;
 			}
 
 			.hero-deco {
 				position: absolute;
 				z-index: 3;
-			}
-
-			.hero-deco--stars {
-				top: -4.9rem;
-				left: 1%;
-				width: 4.6rem;
-			}
-
-			.hero-deco--note {
-				top: -2.6rem;
-				right: 3%;
-				width: 1.6rem;
 			}
 
 			.hero-deco--sparkWhite {
@@ -341,7 +258,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero-photo {
 				position: relative;
 				z-index: 1;
-				margin-top: -11.5rem;
+				margin-top: -9.5rem;
 				height: 92vw;
 				overflow: hidden;
 			}
@@ -708,43 +625,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					padding-bottom: 0;
 				}
 
-				.hero-topBadge br {
-					display: none;
-				}
-
-				.hero-stage {
-					max-width: 46rem;
-				}
-
-				.hero-cloud {
-					padding: 2.5rem 4rem;
-					aspect-ratio: 525.57 / 321.64;
-					background-image: var(--cloud-d);
-				}
-
-				.hero-title img {
-					max-width: 34rem;
-				}
-
-				.hero-intro {
-					font-size: 1.05rem;
-				}
-
-				.hero-limited {
-					width: 6.5rem;
-					height: 6.5rem;
-					top: 6rem;
-					left: 1.5rem;
-					font-size: 1rem;
-				}
-
-				.hero-fade {
-					height: 6.5rem;
-				}
-
-				.hero-photoImg {
-					max-height: 30rem;
-					object-position: center 72%;
+				/* PCレイアウトはモバイル確定後に改めて作る（暫定：センター寄せのまま） */
+				.hero-lockup {
+					max-width: 30rem;
 				}
 
 				.cards {
