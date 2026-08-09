@@ -435,17 +435,15 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			/* 文字階層：特大数字（strong）→ 大きめ太字（.u-em）→ 平文（dd）→ 注釈（small） */
+			/* 見出しチップと本文は縦積み（本文に全幅を使う） */
 			.guide {
-				display: grid;
-				grid-template-columns: auto 1fr;
-				gap: 0.6rem 0.6rem;
-				padding: 1rem 0.75rem 1.1rem;
-				align-items: start;
+				padding: 1rem 0.9rem 1.1rem;
 				line-height: 1.6;
 			}
 
 			.guide dt {
-				padding: 0.1rem 0.45rem;
+				width: fit-content;
+				padding: 0.1rem 0.6rem;
 				background: var(--c-green);
 				border-radius: 0.35rem;
 				color: #fff;
@@ -453,7 +451,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-weight: 700;
 				text-align: center;
 				white-space: nowrap;
-				margin-top: 0.2rem;
+			}
+
+			.guide dt:not(:first-child) {
+				margin-top: 0.9rem;
+			}
+
+			.guide dd {
+				margin-top: 0.25rem;
 			}
 
 			.guide dd {
