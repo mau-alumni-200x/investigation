@@ -18,13 +18,15 @@ const { href = `${import.meta.env.BASE_URL}/workshop/` } = Astro.props;
 
 <style>
   .workshop-banner {
-    margin: 0 var(--spacing-32) var(--spacing-48);
+    width: 100%;
     text-align: center;
   }
 
   .workshop-banner__link {
-    display: inline-block;
-    max-width: 24rem;
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
   }
 
   .workshop-banner img {
