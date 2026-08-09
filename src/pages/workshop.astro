@@ -46,6 +46,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			<div class="hero-photo">
 				<img class="hero-fade" src={asset("assets/imgs/workshop/hero-bg-grad.svg")} alt="" />
 				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="0.03" />
+				<img class="hero-deco hero-deco--sparkYellow" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" data-parallax="0.03" />
 				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@3x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1788" height="1668" />
 			</div>
 		</header>
@@ -262,9 +263,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			.hero-deco--sparkWhite {
-				top: 72%;
-				left: 3%;
+				top: 66%;
+				left: 5%;
 				width: 2.6rem;
+			}
+
+			/* 黄色キラキラ（ヒーロー内）はPCのみ表示 */
+			.hero-deco--sparkYellow {
+				display: none;
 			}
 
 			/* 写真はヒーロー全面を覆う */
@@ -530,14 +536,19 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				padding: 1.75rem 0.5rem 0;
 			}
 
+			/* リボンが左上からはみ出すぶんの上余白を確保 */
 			.hosts-inner {
+				position: relative;
 				background: var(--c-hosts-bg);
 				border-radius: 0.9rem;
-				padding: 1.25rem 1rem 1.5rem;
+				padding: 3.8rem 1rem 1.5rem;
 			}
 
-			/* 支給のリボンSVGを背景に */
+			/* 支給のリボンSVGを背景に。黄色カードの左上から少しはみ出す */
 			.hosts-ttl {
+				position: absolute;
+				top: -0.7rem;
+				left: -0.6rem;
 				width: 8.5rem;
 				padding: 0.8rem 0 1.1rem;
 				background: no-repeat center / 100% 100%;
@@ -706,7 +717,20 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				}
 
 				.hero-deco--sparkWhite {
-					top: 60%;
+					top: 68%;
+					left: calc(50% - 21rem);
+				}
+
+				.hero-deco--sparkYellow {
+					display: block;
+					top: 68%;
+					left: auto;
+					right: calc(50% - 21rem);
+					width: 3rem;
+				}
+
+				.schedule-spark {
+					display: none;
 				}
 
 				/* コンテンツ幅（1列のまま少し広げる） */
