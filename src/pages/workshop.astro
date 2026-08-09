@@ -46,7 +46,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			<div class="hero-photo" data-parallax="0.06">
 				<img class="hero-fade" src={asset("assets/imgs/workshop/hero-bg-grad.svg")} alt="" />
 				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="-0.12" />
-				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@2x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1195" height="1109" />
+				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@3x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1788" height="1668" />
 			</div>
 		</header>
 
@@ -617,7 +617,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			.notes-label {
 				margin-top: 1rem;
-				font-size: 1.04rem;
+				font-size: max(12px, 0.91rem);
 				font-weight: 900;
 			}
 
@@ -628,7 +628,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.notes li {
 				position: relative;
 				padding-left: 1.1em;
-				font-size: 1.04rem;
+				font-size: max(12px, 0.91rem);
 				line-height: 1.8;
 			}
 
@@ -675,9 +675,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			/* ---------- PC（768px〜） ---------- */
 
 			@media (min-width: 768px) {
-				/* ヒーロー：desktop用タイトル一式（幅730px固定・センター） */
+				/* ヒーロー：desktop用タイトル一式（幅730px固定・センター。BP=768なので常に収まる） */
 				.hero-lockup {
-					width: min(100%, 730px);
+					width: 730px;
 					padding-top: 1rem;
 				}
 
