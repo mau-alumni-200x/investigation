@@ -46,7 +46,10 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			<div class="hero-photo">
 				<img class="hero-fade" src={asset("assets/imgs/workshop/hero-bg-grad.svg")} alt="" />
 				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="0.03" />
-				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@3x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1788" height="1668" />
+				<picture>
+					<source media="(min-width: 768px)" srcset={asset("assets/imgs/workshop/hero-bg@3x.png")} />
+					<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg@2x.png")} alt="パラバルーンで遊ぶ子どもたち" width="1195" height="1109" />
+				</picture>
 			</div>
 		</header>
 
@@ -222,7 +225,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hero {
 				position: relative;
 				overflow: hidden;
-				background: linear-gradient(175deg, #dcae76 0%, #e8cf9c 34%, #f7ecd2 60%, #fdf8e9 100%);
+				/* 写真読み込み前のフォールバック色のみ（デザイン上は常に写真が全面） */
+				background: #e8cf9c;
+				padding-bottom: 10.5rem;
 			}
 
 			/* タイトル一式（デザイン合成済みSVG）＋リード文のみHTMLで重ねる */
@@ -265,12 +270,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				width: 2.6rem;
 			}
 
-			/* 写真は雲の背後まで上げ、雲が写真に重なる（デザイン実測） */
+			/* 写真はヒーロー全面を覆う */
 			.hero-photo {
-				position: relative;
+				position: absolute;
+				inset: 0;
 				z-index: 1;
-				margin-top: -12rem;
-				height: 92vw;
 				overflow: hidden;
 			}
 
@@ -292,12 +296,13 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			/* 約1.5倍ズームで壁をカットし、写真の下端（子どもたち）を見せる */
 			.hero-photoImg {
+				position: absolute;
+				inset: 0;
 				display: block;
-				width: 145%;
-				max-width: none;
-				height: auto;
-				margin-left: -22.5%;
-				margin-top: -37vw;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center bottom;
 			}
 
 			/* ---------- Cards ---------- */
@@ -688,23 +693,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					font-size: clamp(12px, 2.9cqw, 18px);
 				}
 
-				/* 写真：ヒーロー全面を覆う（背景色を見せない） */
 				.hero {
 					padding-bottom: 12rem;
 				}
 
-				.hero-photo {
-					position: absolute;
-					inset: 0;
-					margin-top: 0;
-					height: 100%;
-				}
-
 				.hero-photoImg {
-					width: 100%;
-					height: 100%;
-					margin: 0;
-					object-fit: cover;
 					object-position: center 70%;
 				}
 
