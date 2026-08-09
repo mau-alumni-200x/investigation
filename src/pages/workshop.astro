@@ -351,8 +351,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 			.schedule-bubble {
 				display: flex;
-				justify-content: center;
-				padding: 0.25rem 4.5rem 0.9rem 1rem;
+				justify-content: flex-end;
+				padding: 0.25rem 4.2rem 0.9rem 1rem;
 			}
 
 			.schedule-bubble span {
@@ -361,6 +361,17 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				background: no-repeat center / 100% 100%;
 				font-size: 0.82rem;
 				font-weight: 700;
+			}
+
+			/* パラシュートに向く吹き出しのしっぽ（SVGはしっぽ無しピルのためCSSで付与） */
+			.schedule-bubble span::after {
+				content: "";
+				position: absolute;
+				right: -0.55rem;
+				top: 50%;
+				border: 0.42rem solid transparent;
+				border-left-color: var(--c-yellow);
+				transform: translateY(-40%) rotate(-12deg);
 			}
 
 			/* カード右上・写真に重なる黄色いキラキラ */
