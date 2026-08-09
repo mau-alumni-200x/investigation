@@ -302,7 +302,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.cards {
 				max-width: 30rem;
 				margin: 0 auto;
-				padding: 0.25rem 1rem 0;
+				padding: 0.25rem 0.5rem 0;
 				display: grid;
 				gap: 1.5rem;
 			}
@@ -336,8 +336,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.schedule {
 				display: grid;
 				grid-template-columns: auto 1fr;
-				gap: 0.1rem 0.5rem;
-				padding: 0.75rem 0.75rem 0.1rem;
+				gap: 0.1rem 0.6rem;
+				padding: 1rem 1rem 0.1rem;
 				line-height: 1.6;
 			}
 
@@ -400,9 +400,15 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: grid;
 				grid-template-columns: auto 1fr;
 				gap: 0.6rem 0.6rem;
-				padding: 1rem 0.75rem 1.1rem;
+				padding: 1rem 1rem 1.1rem;
 				align-items: start;
 				line-height: 1.6;
+			}
+
+			/* 特大数字の行（参加費・対象年齢）はチップを行の縦中央に */
+			.guide dt:nth-of-type(2),
+			.guide dt:nth-of-type(3) {
+				margin-top: 0.45rem;
 			}
 
 			.guide dt {
@@ -514,13 +520,13 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.hosts {
 				max-width: 30rem;
 				margin: 0 auto;
-				padding: 1.75rem 1rem 0;
+				padding: 1.75rem 0.5rem 0;
 			}
 
 			.hosts-inner {
 				background: var(--c-hosts-bg);
 				border-radius: 0.9rem;
-				padding: 1.25rem 0.75rem 1.5rem;
+				padding: 1.25rem 1rem 1.5rem;
 			}
 
 			/* 支給のリボンSVGを背景に */
@@ -571,12 +577,12 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			.hosts-bubble {
-				width: fit-content;
+				width: 100%;
 				margin: 1.5rem auto 0;
-				padding: 0.75rem 0.7rem;
+				padding: 0.75rem 0.5rem;
 				background: #fff;
-				border-radius: 2.2rem;
-				font-size: max(12px, 0.88rem);
+				border-radius: 1.2rem;
+				font-size: max(12px, 0.97rem);
 				font-weight: 700;
 				text-align: center;
 				white-space: nowrap;
