@@ -27,7 +27,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			<div class="hero-lockup" data-parallax="-0.06">
 				<h1 class="hero-lockupTtl">
 					<picture>
-						<source media="(min-width: 640px)" srcset={asset("assets/imgs/workshop/ttl-desktop.svg")} />
+						<source media="(min-width: 768px)" srcset={asset("assets/imgs/workshop/ttl-desktop.svg")} />
 						<img
 							src={asset("assets/imgs/workshop/ttl.svg")}
 							alt="ムサビ卒の現役保育士＆アトリエリスタによるワークショップ　同窓会参加者限定　子連れで！ムサビ同窓会を楽しもう　11月28日"
@@ -198,7 +198,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-size: calc(16px * 100vw / 390);
 			}
 
-			@media (min-width: 640px) {
+			@media (min-width: 768px) {
 				html {
 					font-size: 16px;
 				}
@@ -672,9 +672,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				content: " »";
 			}
 
-			/* ---------- PC（640px〜） ---------- */
+			/* ---------- PC（768px〜） ---------- */
 
-			@media (min-width: 640px) {
+			@media (min-width: 768px) {
 				/* ヒーロー：desktop用タイトル一式（幅563px固定・センター） */
 				.hero-lockup {
 					width: min(100%, 563px);
@@ -736,7 +736,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				.cards {
 					max-width: 60rem;
 					grid-template-columns: 1fr 1fr;
-					align-items: start;
+					align-items: stretch;
 					padding-top: 2.5rem;
 				}
 
