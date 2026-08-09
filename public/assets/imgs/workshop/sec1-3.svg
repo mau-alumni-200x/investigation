@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 152 106">
+<svg id="b" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 152 106">
   <defs>
-    <style>
-      .cls-1 {
-        fill: #f4c61b;
-      }
-
-      .cls-2 {
-        filter: url(#drop-shadow-1);
-      }
-    </style>
-    <filter id="drop-shadow-1" x="0" y="0" width="152" height="106" filterUnits="userSpaceOnUse">
+    <filter id="d" data-name="drop-shadow-1" x="0" y="0" width="152" height="106" filterUnits="userSpaceOnUse">
       <feOffset dx="4.29" dy="4.29"/>
-      <feGaussianBlur result="blur" stdDeviation="4.29"/>
+      <feGaussianBlur result="e" stdDeviation="4.29"/>
       <feFlood flood-color="#231815" flood-opacity=".5"/>
-      <feComposite in2="blur" operator="in"/>
+      <feComposite in2="e" operator="in"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="_デザイン" data-name="デザイン">
-    <g class="cls-2">
-      <path class="cls-1" d="M110.36,9.28H43.62c-12.95,0-23.44,10.49-23.44,23.44v10.34l-10.94,8.08,10.94.65v12.6c0,12.95,10.49,23.44,23.44,23.44h66.74c12.95,0,23.44-10.49,23.44-23.44v-31.66c0-12.95-10.49-23.44-23.44-23.44Z"/>
+  <g id="c" data-name="デザイン">
+    <g style="filter: url(#d);">
+      <path d="M110.36,9.28H43.62c-12.95,0-23.44,10.49-23.44,23.44v28.52l-10.94,8.08,11.62.69c2.52,10.23,11.75,17.81,22.76,17.81h66.74c12.95,0,23.44-10.49,23.44-23.44v-31.66c0-12.95-10.49-23.44-23.44-23.44Z" style="fill: #f4c61b;"/>
     </g>
   </g>
 </svg>
