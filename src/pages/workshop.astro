@@ -294,8 +294,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--c-cream));
 			}
 
-			/* 約1.5倍ズームで壁をカットし、写真の下端（子どもたち）を見せる */
-			/* スマホ：画像を天地100%（縦は切らず、横は中央基準で切る） */
+			/* スマホ：画像は天地108%（本人指定） */
 			.hero-photoImg {
 				position: absolute;
 				top: 0;
@@ -304,7 +303,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: block;
 				width: auto;
 				max-width: none;
-				height: 100%;
+				height: 108%;
 			}
 
 			/* ---------- Cards ---------- */
@@ -706,7 +705,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
-					object-position: center 40%;
+					object-position: center 64%;
 				}
 
 				.hero-deco--sparkWhite {
