@@ -88,22 +88,17 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						</dd>
 						<dt>対 象</dt>
 						<dd>
-							<strong>2<span class="u-unit">歳以上</span></strong><br /><small>（ひとりで参加できるお子さま）</small>
+							<strong>2<span class="u-unit">歳以上</span></strong><small>（ひとりで参加できるお子さま）</small>
 						</dd>
 						<dt>持ち物</dt>
-						<dd class="guide-items">
-							<span class="guide-itemsText">
-								<span class="u-em">水筒</span><br />
-								<span class="u-em">おやつ</span><small>（休憩で食べられるもの）</small><br />
-								<span class="u-em">ハンカチ</span><br />
-								<span class="u-em">ティッシュ</span><br />
-								<span class="u-em">着替え・おむつ</span><small>（必要に応じて）</small><br />
-								<span class="u-em">ゴミ袋</span>
-							</span>
-							<span class="guide-bubble" role="note">
-								<img class="guide-bubbleImg" src={asset("assets/imgs/workshop/sec1-3.svg")} alt="" />
-								<span class="guide-bubbleText">持ち物には<br />すべて記名を<br />お願いします</span>
-							</span>
+						<dd>
+							<span class="u-em">水筒</span><br />
+							<span class="u-em">おやつ</span><br /><small>（休憩で食べられるもの）</small><br />
+							<span class="u-em">ハンカチ</span><br />
+							<span class="u-em">ティッシュ</span><br />
+							<span class="u-em">着替え・おむつ</span><small>（必要に応じて）</small><br />
+							<span class="u-em">ゴミ袋</span>
+							<span class="guide-note">※ 持ち物にはすべて記名をお願いします</span>
 						</dd>
 					</dl>
 				</section>
@@ -185,11 +180,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 					<h3 class="notes-label">受付とお迎え：</h3>
 					<ul>
-						<li>おむつ交換が必要な場合は受付時に同意書に記入いただきます</li>
 						<li>発熱など体調がすぐれない場合は、参加をお控えください</li>
-						<li>お帰りの際は、受付にてお申し込みの保護者の方へお引き渡しします</li>
-						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします</li>
-						<li>ゴミの持ち帰りにご協力ください</li>
+						<li>同窓会終了後はすみやかに受付までお迎えに来てください</li>
 					</ul>
 
 					<h3 class="notes-label">費用：</h3>
@@ -198,13 +190,13 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						<li>保護者の方も一緒に遊ぶ場合は、お子さまとは別に参加費が必要です（見守りだけの場合は無料です）</li>
 					</ul>
 
-					<h3 class="notes-label">注意事項：</h3>
+					<h3 class="notes-label">イベントでの過ごし方：</h3>
 					<ul>
-						<li>すぐにお越しいただく場合がありますので、同窓会会場内でお過ごしください</li>
 						<li>未就学児の保護者の方は、30〜60分ごとにお子さまの様子を見に来てください</li>
+						<li>すぐにお越しいただく場合がありますので、会場付近でお過ごしください</li>
 						<li>おやつの交換・分け合いはご遠慮ください</li>
 						<li>お子さまが他の参加者のお持ち物や会場の設備等に損害を与えた場合は、保護者の方にご対応をお願いします</li>
-						<li>参加はムサビ同窓会に出席する方のお子さまに限ります</li>
+						<li>ゴミの持ち帰りにご協力ください</li>
 					</ul>
 
 				</div>
@@ -559,46 +551,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-size: 0.95rem;
 			}
 
-			/* 持ち物リスト＋右に重なる記名吹き出し */
-			.guide-items {
-				position: relative;
+			/* 記名の注意書き：持ち物リストの下・14px相当 */
+			.guide-note {
 				display: block;
-				padding-right: 0.5rem;
-			}
-
-			.guide-itemsText {
-				display: block;
-			}
-
-			/* 吹き出し：持ち物リストの右上（本人がDevToolsで調整した実測値） */
-			/* SP: リストの下・右寄せ（リスト右の空きが無いため） */
-			.guide-bubble {
-				position: relative;
-				display: block;
-				margin: 0.4rem -0.4rem 0 auto;
-				width: 9rem;
-				aspect-ratio: 152 / 106;
-			}
-
-			.guide-bubbleImg {
-				position: absolute;
-				inset: 0;
-				width: 100%;
-				height: 100%;
-			}
-
-			.guide-bubbleText {
-				position: absolute;
-				inset: 0;
-				display: grid;
-				place-content: center;
-				padding-left: 0.4rem;
-				font-size: max(12px, 0.78rem);
-				font-weight: 700;
-				line-height: 1.55;
-				text-align: center;
-				white-space: nowrap;
-				margin-top: -0.2rem;
+				margin-top: 0.6rem;
+				font-size: max(12px, 0.875rem);
 			}
 
 			/* ---------- Hosts ---------- */
@@ -882,15 +839,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				.schedule {
 					flex: 1;
 					align-content: space-evenly;
-				}
-
-				/* 記名吹き出し：持ち物リストの右・下寄せ（カード外へ少しはみ出し） */
-				.guide-bubble {
-					position: absolute;
-					margin: 0;
-					top: auto;
-					bottom: 0.3rem;
-					right: -2.5rem;
 				}
 
 				.hosts {
