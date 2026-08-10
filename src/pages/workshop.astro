@@ -88,7 +88,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						</dd>
 						<dt>対 象</dt>
 						<dd>
-							ひとりで参加できるお子さま<small>（2歳〜目安）</small>
+							<strong>2<span class="u-unit">歳以上</span></strong><small>（ひとりで参加できるお子さま）</small>
 						</dd>
 						<dt>持ち物</dt>
 						<dd class="guide-items">
@@ -182,32 +182,32 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 					<h3 class="notes-label">お申し込み：</h3>
 					<ul>
-						<li>当日つながる携帯番号をご記入ください。</li>
-						<li>2歳未満のお子さまの参加を希望される場合は、お申し込み前にお問い合わせください。</li>
+						<li>当日つながる携帯番号をご記入ください</li>
+						<li>2歳未満のお子さまの参加を希望される場合は、お申し込み前にお問い合わせください</li>
 					</ul>
 
 					<h3 class="notes-label">受付とお迎え：</h3>
 					<ul>
-						<li>おむつ交換が必要な場合は受付時に同意書に記入いただきます。</li>
-						<li>発熱など体調がすぐれない場合は、参加をお控えください。</li>
-						<li>お帰りの際は、受付にてお申し込みの保護者の方へお引き渡しします。</li>
-						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします。</li>
-						<li>ゴミの持ち帰りにご協力ください。</li>
+						<li>おむつ交換が必要な場合は受付時に同意書に記入いただきます</li>
+						<li>発熱など体調がすぐれない場合は、参加をお控えください</li>
+						<li>お帰りの際は、受付にてお申し込みの保護者の方へお引き渡しします</li>
+						<li>同窓会終了後はすみやかにお迎えに来ていただくようお願いします</li>
+						<li>ゴミの持ち帰りにご協力ください</li>
 					</ul>
 
 					<h3 class="notes-label">費用：</h3>
 					<ul>
-						<li>参加費にはレクリエーション保険、資材、ボランティアスタッフの交通費などの諸経費が含まれます。</li>
-						<li>保護者の方も一緒に遊ぶ場合は、お子さまとは別に参加費が必要です（見守りだけの場合は無料です）。</li>
+						<li>参加費にはレクリエーション保険、資材、ボランティアスタッフの交通費などの諸経費が含まれます</li>
+						<li>保護者の方も一緒に遊ぶ場合は、お子さまとは別に参加費が必要です（見守りだけの場合は無料です）</li>
 					</ul>
 
 					<h3 class="notes-label">注意事項：</h3>
 					<ul>
-						<li>すぐにお越しいただく場合がありますので、同窓会会場内でお過ごしください。</li>
-						<li>未就学児の保護者の方は、30〜60分ごとにお子さまの様子を見に来てください。</li>
-						<li>おやつの交換・分け合いはご遠慮ください。</li>
-						<li>お子さまが他の参加者のお持ち物や会場の設備等に損害を与えた場合は、保護者の方にご対応をお願いします。</li>
-						<li>参加はムサビ同窓会に出席する方のお子さまに限ります。</li>
+						<li>すぐにお越しいただく場合がありますので、同窓会会場内でお過ごしください</li>
+						<li>未就学児の保護者の方は、30〜60分ごとにお子さまの様子を見に来てください</li>
+						<li>おやつの交換・分け合いはご遠慮ください</li>
+						<li>お子さまが他の参加者のお持ち物や会場の設備等に損害を与えた場合は、保護者の方にご対応をお願いします</li>
+						<li>参加はムサビ同窓会に出席する方のお子さまに限ります</li>
 					</ul>
 
 				</div>
@@ -424,9 +424,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				font-size: max(12px, 0.91rem);
 			}
 
-			/* 黄色カード内のリード文（リボン見出しと横並び） */
+			/* 黄色カード内のリード文（リボンに回り込み） */
 			.hosts-lead {
-				margin: -0.4rem 0 1rem 8rem;
+				margin: 0 0 1rem;
 				font-size: 1.04rem;
 				line-height: 1.8;
 			}
@@ -612,11 +612,10 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				padding: 1rem 1rem 1.5rem;
 			}
 
-			/* 支給のリボンSVGを背景に。黄色カードの左上から少しはみ出す */
+			/* 支給のリボンSVGを背景に。黄色カードの左上から少しはみ出す（SPは回り込み） */
 			.hosts-ttl {
-				position: absolute;
-				top: -0.7rem;
-				left: -0.6rem;
+				float: left;
+				margin: -1.7rem 0.8rem 0.3rem -1.6rem;
 				width: 8.5rem;
 				padding: 0.8rem 0 1.1rem;
 				background: no-repeat center / 100% 100%;
@@ -636,6 +635,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				display: grid;
 				gap: 1.5rem;
 				margin-top: 0.25rem;
+				clear: both;
 			}
 
 			.host-img {
@@ -820,9 +820,15 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				}
 
 				.hosts-ttl {
+					float: none;
 					position: absolute;
 					top: -0.9rem;
 					left: -0.8rem;
+					margin: 0;
+				}
+
+				.hosts-lead {
+					margin: -0.4rem 0 1rem 8rem;
 				}
 
 				.cta {
