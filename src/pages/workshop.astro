@@ -88,7 +88,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						</dd>
 						<dt>対 象</dt>
 						<dd>
-							<strong>2<span class="u-unit">歳以上</span></strong><small>（ひとりで参加できるお子さま）</small>
+							<strong>2<span class="u-unit">歳以上</span></strong><br /><small>（ひとりで参加できるお子さま）</small>
 						</dd>
 						<dt>持ち物</dt>
 						<dd class="guide-items">
@@ -571,10 +571,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			}
 
 			/* 吹き出し：持ち物リストの右上（本人がDevToolsで調整した実測値） */
+			/* SP: リストの下・右寄せ（リスト右の空きが無いため） */
 			.guide-bubble {
-				position: absolute;
-				right: -1rem;
-				top: -71px;
+				position: relative;
+				display: block;
+				margin: 0.4rem -0.4rem 0 auto;
 				width: 9rem;
 				aspect-ratio: 152 / 106;
 			}
@@ -734,7 +735,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				position: relative;
 				padding-left: 1.1em;
 				font-size: max(12px, 0.91rem);
-				line-height: 1.8;
+				line-height: 1.6;
 			}
 
 			.notes li + li {
@@ -885,6 +886,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 				/* 記名吹き出し：持ち物リストの右・下寄せ（カード外へ少しはみ出し） */
 				.guide-bubble {
+					position: absolute;
+					margin: 0;
 					top: auto;
 					bottom: 0.3rem;
 					right: -2.5rem;
