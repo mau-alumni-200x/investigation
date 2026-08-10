@@ -215,6 +215,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 
 				</div>
 			</section>
+
+			<footer class="contact">
+				<a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSemUsnKEXmyJ9RPv9-Ivw75QEB55WW_6LIG7tF7-sjasZsxdA/viewform"
+					target="_blank"
+					rel="noopener noreferrer"
+				>お問い合わせ</a>
+			</footer>
 		</main>
 
 		<div class="cta">
@@ -688,8 +696,22 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			/* ---------- Notes ---------- */
 
 			.notes {
-				/* 下余白は固定CTAに隠れないぶんを含む（bodyへの指定はAstroのスコープ都合で効かない） */
-				padding: 1.75rem 1rem 9rem;
+				padding: 1.75rem 1rem 1rem;
+			}
+
+			/* 問い合わせ（下余白は固定CTAに隠れないぶんを含む） */
+			.contact {
+				padding: 0.5rem 1rem 9rem;
+				text-align: center;
+			}
+
+			.contact a {
+				color: var(--c-text);
+				font-size: max(12px, 0.91rem);
+				letter-spacing: 0.05em;
+				opacity: 0.7;
+				text-decoration: underline;
+				text-underline-offset: 0.2em;
 			}
 
 			.notes-inner {
@@ -813,8 +835,8 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					max-width: 34rem;
 				}
 
-				.notes {
-					padding-bottom: 2.5rem;
+				.contact {
+					padding-bottom: 3rem;
 				}
 
 				/* 主催者リボン：黄色カードの左上から少しはみ出す */
