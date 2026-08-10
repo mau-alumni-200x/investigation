@@ -84,7 +84,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 						</dd>
 						<dt>参加費</dt>
 						<dd>
-							1人<strong> 1,500<span class="u-unit">円</span></strong>
+							1人<strong> 1,500<span class="u-unit">円</span></strong><small class="u-red">（現金のみ）</small>
 						</dd>
 						<dt>対 象</dt>
 						<dd>
@@ -538,6 +538,11 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 			.u-right {
 				display: block;
 				text-align: right;
+			}
+
+			/* 赤文字の注意書き（現金のみ 等） */
+			.u-red {
+				color: var(--c-red);
 			}
 
 			.guide strong {
