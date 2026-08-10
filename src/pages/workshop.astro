@@ -109,15 +109,14 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				</section>
 			</div>
 
-			<p class="hosts-lead">
-				現役保育士・アトリエリスタが中心となって、しっかりお子さまを見守ります。おむつ替えやトイレのお手伝いもスタッフが行いますので、ご安心ください。
-			</p>
-
 			<section class="hosts" aria-labelledby="hosts-ttl">
 				<div class="hosts-inner">
 					<h2 class="hosts-ttl" id="hosts-ttl" style={`background-image: url(${asset("assets/imgs/workshop/sec2-ttl.svg")});`}>
 						<span class="hosts-ttl-text">ワークショップ<br />主催者</span>
 					</h2>
+					<p class="hosts-lead">
+						現役保育士・アトリエリスタが中心となって、しっかりお子さまを見守ります。おむつ替えやトイレのお手伝いもスタッフが行いますので、ご安心ください。
+					</p>
 					<div class="hosts-grid">
 						<article class="host">
 							<img class="host-img" src={asset("assets/imgs/workshop/sec2-1@2x.png")} alt="" width="448" height="329" />
@@ -453,11 +452,9 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				content: " »";
 			}
 
-			/* 主催者欄の上のリード文 */
+			/* 黄色カード内のリード文 */
 			.hosts-lead {
-				max-width: 30rem;
-				margin: 1.75rem auto 0;
-				padding: 0 1rem;
+				margin-top: 1rem;
 				font-size: 1.04rem;
 				line-height: 1.8;
 			}
