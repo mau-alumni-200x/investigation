@@ -183,12 +183,6 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				<div class="notes-inner">
 					<h2 class="notes-ttl" id="notes-ttl">ご注意事項</h2>
 
-					<h3 class="notes-label">お申し込み：</h3>
-					<ul>
-						<li>当日つながる携帯番号をご記入ください</li>
-						<li>2歳未満のお子さまの参加を希望される場合は、お申し込み前にお問い合わせください</li>
-					</ul>
-
 					<h3 class="notes-label">受付とお迎え：</h3>
 					<ul>
 						<li>おむつ交換が必要な場合は受付時に同意書に記入いただきます</li>
@@ -221,7 +215,7 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 					href="https://docs.google.com/forms/d/e/1FAIpQLSemUsnKEXmyJ9RPv9-Ivw75QEB55WW_6LIG7tF7-sjasZsxdA/viewform"
 					target="_blank"
 					rel="noopener noreferrer"
-				>お問い合わせ</a>
+				>ワークショップに関するお問い合わせ</a>
 			</footer>
 		</main>
 
@@ -699,19 +693,21 @@ const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
 				padding: 1.75rem 1rem 1rem;
 			}
 
-			/* 問い合わせ（下余白は固定CTAに隠れないぶんを含む） */
+			/* 問い合わせ：チラシ準拠の茶色帯・白文字（下余白は固定CTAに隠れないぶんを含む） */
 			.contact {
-				padding: 0.5rem 1rem 9rem;
+				margin-top: 1rem;
+				padding: 2rem 1rem 8.5rem;
+				background: var(--c-text);
 				text-align: center;
 			}
 
 			.contact a {
-				color: var(--c-text);
-				font-size: max(12px, 0.91rem);
+				color: #fff;
+				font-size: max(12px, 0.97rem);
+				font-weight: 700;
 				letter-spacing: 0.05em;
-				opacity: 0.7;
 				text-decoration: underline;
-				text-underline-offset: 0.2em;
+				text-underline-offset: 0.25em;
 			}
 
 			.notes-inner {
