@@ -1,0 +1,940 @@
+---
+import { asset } from "../utils/paths.js";
+
+// ワークショップ申込フォームURL（チラシのQR記載のもの・要確認）
+const formUrl = "https://forms.gle/ZAc56xXq2kcpcsUc8";
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>子連れで！ムサビ同窓会を楽しもう | お子さま向けワークショップ 11/28</title>
+		<meta
+			name="description"
+			content="11/28 ムサビ同窓会の隣接会場でお子さま向けワークショップを開催。ムサビ卒の現役保育士＆アトリエリスタがお子さまを見守ります。"
+		/>
+		<link rel="icon" type="image/svg+xml" href={asset("assets/imgs/workshop/sec1-1.svg")} />
+		<link rel="icon" type="image/png" sizes="64x64" href={asset("assets/imgs/workshop/favicon-64.png")} />
+		<link rel="apple-touch-icon" sizes="180x180" href={asset("assets/imgs/workshop/favicon-180.png")} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="hero">
+			<div class="hero-lockup" data-parallax="0.12">
+				<h1 class="hero-lockupTtl">
+					<picture>
+						<source media="(min-width: 768px)" srcset={asset("assets/imgs/workshop/ttl-desktop.svg")} />
+						<img
+							src={asset("assets/imgs/workshop/ttl.svg")}
+							alt="ムサビ卒の現役保育士＆アトリエリスタによるワークショップ　同窓会参加者限定　子連れで！ムサビ同窓会を楽しもう　11月28日"
+							width="381.39"
+							height="399.3"
+						/>
+					</picture>
+				</h1>
+				<p class="hero-intro">
+					隣接会場でお子さま向けワークショップを開催！<br />
+					経験豊富なスタッフが見守りますので、<br />
+					ゆっくり同窓会をお楽しみください。
+				</p>
+			</div>
+
+			<div class="hero-photo">
+				<img class="hero-deco hero-deco--sparkWhite" src={asset("assets/imgs/workshop/hero-3.svg")} alt="" data-parallax="0.03" />
+				<img class="hero-deco hero-deco--sparkYellow" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" data-parallax="0.03" />
+				<img class="hero-photoImg" src={asset("assets/imgs/workshop/hero-bg.webp")} alt="パラバルーンで遊ぶ子どもたち" width="1788" height="1668" />
+			</div>
+		</header>
+
+		<main>
+			<div class="cards">
+				<section class="card card--schedule" aria-labelledby="schedule-ttl">
+					<img class="schedule-spark" src={asset("assets/imgs/workshop/hero-4.svg")} alt="" data-parallax="0.035" />
+					<h2 class="card-ttl card-ttl--red" id="schedule-ttl">当日の流れ（予定）</h2>
+					<dl class="schedule">
+						<dt>13:30</dt><dd>受付開始</dd>
+						<dt>14:00</dt><dd>イントロ・ウォームアップ</dd>
+						<dt>14:40</dt><dd>パラバルーンあそび</dd>
+						<dt>15:00</dt><dd>休憩（10分）</dd>
+						<dt>15:15</dt><dd>パラバルーンあそび 音楽に合わせて</dd>
+						<dt>15:25</dt><dd>休憩（5分）</dd>
+						<dt>15:30</dt><dd>パラバルーンあそび お披露目</dd>
+						<dt>16:00</dt><dd>お片付け</dd>
+					</dl>
+					<p class="schedule-bubble">
+						<span style={`background-image: url(${asset("assets/imgs/workshop/sec1-2.svg")});`}>お土産パラシュートがあるよ</span>
+					</p>
+					<img class="schedule-parachute" src={asset("assets/imgs/workshop/sec1-1.svg")} alt="" width="90" height="102" data-parallax="0.03" />
+				</section>
+
+				<section class="card" aria-labelledby="guide-ttl">
+					<h2 class="card-ttl card-ttl--green" id="guide-ttl">ご利用案内</h2>
+					<dl class="guide">
+						<dt>会 場</dt>
+						<dd>
+							<span class="u-em">武蔵野美術大学 課外センター</span>
+							<small class="u-right">（鷹の台ホール隣）</small>
+						</dd>
+						<dt>参加費</dt>
+						<dd>
+							1人<strong> 1,500<span class="u-unit">円</span></strong><small class="u-red">（現金のみ）</small>
+						</dd>
+						<dt>対 象</dt>
+						<dd>
+							<strong>2<span class="u-unit">歳以上</span></strong><small>（ひとりで参加できるお子さま）</small>
+						</dd>
+						<dt>持ち物</dt>
+						<dd>
+							<span class="u-em">水筒</span><br />
+							<span class="u-em">おやつ</span><br /><small>（休憩で食べられるもの）</small><br />
+							<span class="u-em">ハンカチ</span><br />
+							<span class="u-em">ティッシュ</span><br />
+							<span class="u-em">着替え・おむつ</span><small>（必要に応じて）</small><br />
+							<span class="u-em">ゴミ袋</span>
+							<span class="guide-note">※ 持ち物にはすべて記名をお願いします</span>
+						</dd>
+					</dl>
+				</section>
+			</div>
+
+			<section class="hosts" aria-labelledby="hosts-ttl">
+				<div class="hosts-inner">
+					<h2 class="hosts-ttl" id="hosts-ttl" style={`background-image: url(${asset("assets/imgs/workshop/sec2-ttl.svg")});`}>
+						<span class="hosts-ttl-text">ワークショップ<br />主催者</span>
+					</h2>
+					<div class="hosts-grid">
+						<article class="host">
+							<img class="host-img" src={asset("assets/imgs/workshop/sec2-1@2x.png")} alt="" width="448" height="329" />
+							<div class="host-body">
+								<p class="host-grad">2006年視デ卒</p>
+								<h3 class="host-name">半澤菜穂子（なお先生）</h3>
+								<p class="host-desc">
+									こども園や保育園でアトリエリスタとして働きながら、子ども向けのワークショップやイベントを企画・主催しています。学生時代のあだ名はだいちゃん。
+								</p>
+							</div>
+						</article>
+						<article class="host">
+							<img class="host-img" src={asset("assets/imgs/workshop/sec2-2@2x.png")} alt="" width="381" height="329" />
+							<div class="host-body">
+								<p class="host-grad">2008年視デ卒</p>
+								<h3 class="host-name">山崎佳奈（もりかな先生）</h3>
+								<p class="host-desc">
+									保育士として働きながら、なお先生と一緒に子ども向けのイベントを開催しています。子どもが安心して過ごせる環境づくりを大切にしています。
+								</p>
+							</div>
+						</article>
+					</div>
+					<p class="hosts-bubble">
+						<span>保育士や図工専科教員など、<br />10名程度のボランティアで運営します</span>
+					</p>
+					<p class="hosts-lead">
+						現役保育士・アトリエリスタが中心となって、しっかりお子さまを見守ります。おむつ替えやトイレのお手伝いもスタッフが行いますので、ご安心ください。
+					</p>
+				</div>
+			</section>
+
+			<div class="cards cards--second">
+				<section class="card" aria-labelledby="apply-ttl">
+					<h2 class="card-ttl card-ttl--purple" id="apply-ttl">お申し込み方法</h2>
+					<div class="card-body">
+						<p>
+							事前にWEBでお申し込みいただくと、当日の受付がスムーズになります。
+						</p>
+						<dl class="apply-deadlines">
+							<dt>一次受付</dt><dd>8/31まで</dd>
+							<dt>二次受付</dt><dd>11/13まで</dd>
+						</dl>
+						<p>当日、会場での受付も可能です。</p>
+						<p class="apply-note">
+							※ 先着順での受付となります。定員に達した場合は期日前に終了することがあります。
+						</p>
+					</div>
+				</section>
+
+				<section class="card" aria-labelledby="onegai-ttl">
+					<h2 class="card-ttl card-ttl--blue" id="onegai-ttl">参加にあたってのお願い</h2>
+					<div class="card-body">
+						<p>
+							お子さまに楽しんでもらうための会ですので、激しく泣いてしまったり、保護者の方と離れて過ごすのが難しいときは、無理をさせず保護者の方にお声がけします。
+						</p>
+						<p>
+							同窓会会場にはお子さまは入場できませんので、お子さまが楽しめそうかご検討の上で参加いただければ幸いです。
+						</p>
+						<p>
+							保護者の不安はお子さまに伝わります。当日は安心して送り出すお気持ちでお越しください。
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<section class="notes" aria-labelledby="notes-ttl">
+				<div class="notes-inner">
+					<h2 class="notes-ttl" id="notes-ttl">ご注意事項</h2>
+
+					<h3 class="notes-label">受付とお迎え：</h3>
+					<ul>
+						<li>発熱など体調がすぐれない場合は、参加をお控えください</li>
+						<li>同窓会終了後はすみやかに受付までお迎えに来てください</li>
+					</ul>
+
+					<h3 class="notes-label">費用：</h3>
+					<ul>
+						<li>参加費にはレクリエーション保険、資材、ボランティアスタッフの交通費などの諸経費が含まれます</li>
+						<li>保護者の方も一緒に遊ぶ場合は、お子さまとは別に参加費が必要です（見守りだけの場合は無料です）</li>
+					</ul>
+
+					<h3 class="notes-label">イベントでの過ごし方：</h3>
+					<ul>
+						<li>未就学児の保護者の方は、30〜60分ごとにお子さまの様子を見に来てください</li>
+						<li>すぐにお越しいただく場合がありますので、会場付近でお過ごしください</li>
+						<li>おやつの交換・分け合いはご遠慮ください</li>
+						<li>お子さまが他の参加者のお持ち物や会場の設備等に損害を与えた場合は、保護者の方にご対応をお願いします</li>
+						<li>ゴミの持ち帰りにご協力ください</li>
+					</ul>
+
+				</div>
+			</section>
+
+			<footer class="contact">
+				<a
+					href="https://docs.google.com/forms/d/e/1FAIpQLSemUsnKEXmyJ9RPv9-Ivw75QEB55WW_6LIG7tF7-sjasZsxdA/viewform"
+					target="_blank"
+					rel="noopener noreferrer"
+				>ワークショップに関するお問い合わせ</a>
+			</footer>
+		</main>
+
+		<div class="cta">
+			<a class="cta-btn" href={formUrl} target="_blank" rel="noopener noreferrer">お申込みはこちら</a>
+		</div>
+
+		<style>
+			/* チラシPDFからピクセル実測した色 */
+			:root {
+				--c-text: #402010;
+				--c-red: #e73945;
+				--c-green: #329039;
+				--c-yellow: #f4c61b;
+				--c-pink: #ec7694;
+				--c-brown: #804f21;
+				--c-cream: #ffffff;
+				--c-card: #ffffff;
+				--c-hosts-bg: #fcf2c2;
+				--shadow-card: 0.3rem 0.3rem 0.5rem rgba(35, 24, 21, 0.35);
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-size: calc(16px * 100vw / 390);
+			}
+
+			@media (min-width: 768px) {
+				html {
+					font-size: 16px;
+				}
+			}
+
+			body {
+				font-family: "Zen Kaku Gothic New", sans-serif;
+				font-weight: 500;
+				color: var(--c-text);
+				background: var(--c-cream);
+				line-height: 1.8;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			/* ---------- Hero ---------- */
+
+			.hero {
+				position: relative;
+				overflow: hidden;
+				/* 写真読み込み前のフォールバック色のみ（デザイン上は常に写真が全面） */
+				background: #e8cf9c;
+				padding-bottom: 10.5rem;
+			}
+
+			/* タイトル一式（デザイン合成済みSVG）＋リード文のみHTMLで重ねる */
+			.hero-lockup {
+				position: relative;
+				z-index: 2;
+				width: min(100%, 375px);
+				margin: 0 auto;
+				padding-top: 0.5rem;
+				container-type: inline-size;
+			}
+
+			.hero-lockupTtl img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+			.hero-intro {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 76%;
+				/* タイトル（コンテナ）幅基準・最小12px・375px時15px相当。cqw非対応ブラウザはremにフォールバック */
+				font-size: 0.97rem;
+				font-size: max(12px, 4cqw);
+				font-weight: 700;
+				line-height: 1.4;
+				text-align: center;
+			}
+
+			.hero-deco {
+				position: absolute;
+				z-index: 3;
+			}
+
+			.hero-deco--sparkWhite {
+				top: 66%;
+				left: 5%;
+				width: 2.6rem;
+			}
+
+			/* 黄色キラキラ（ヒーロー内）はPCのみ表示 */
+			.hero-deco--sparkYellow {
+				display: none;
+			}
+
+			/* 写真はヒーロー全面を覆う */
+			.hero-photo {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				overflow: hidden;
+			}
+
+			/* 写真下端は次セクションの背景色へフェードアウト */
+			.hero-photo::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 5rem;
+				background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--c-cream));
+			}
+
+			/* スマホ：画像は天地108%（本人指定） */
+			.hero-photoImg {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				display: block;
+				width: auto;
+				max-width: none;
+				height: 108%;
+			}
+
+			/* ---------- Cards ---------- */
+
+			.cards {
+				max-width: 30rem;
+				margin: 0 auto;
+				padding: 0.25rem 0.5rem 0;
+				display: grid;
+				gap: 1.5rem;
+			}
+
+			.card {
+				position: relative;
+				background: var(--c-card);
+				border-radius: 0.9rem;
+				box-shadow: var(--shadow-card);
+			}
+
+			.card-ttl {
+				padding: 0.25rem 1rem;
+				border-radius: 0.9rem 0.9rem 0 0;
+				color: #fff;
+				font-size: 1rem;
+				font-weight: 900;
+				text-align: center;
+				letter-spacing: 0.05em;
+				line-height: 1.6;
+			}
+
+			.card-ttl--red {
+				background: var(--c-red);
+			}
+
+			.card-ttl--green {
+				background: var(--c-green);
+			}
+
+			/* タイトルの「し」の青・「う」の紫（ttl.svg実測） */
+			.card-ttl--blue {
+				background: #0053a5;
+			}
+
+			.card-ttl--purple {
+				background: #895a9b;
+			}
+
+			.card-body {
+				padding: 1rem 1rem 1.25rem;
+				font-size: 1.04rem;
+				font-weight: 500;
+				line-height: 1.8;
+			}
+
+			.card-body p + p {
+				margin-top: 0.75em;
+			}
+
+			.cards--second {
+				padding-top: 1.5rem;
+			}
+
+			.apply-deadlines {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.2rem 0.8rem;
+				margin: 0.75em 0;
+				font-weight: 700;
+			}
+
+			.apply-deadlines dt {
+				white-space: nowrap;
+			}
+
+			.apply-note {
+				font-size: max(12px, 0.91rem);
+			}
+
+			/* 黄色カード内のリード文（バブルの下） */
+			.hosts-lead {
+				margin: 1rem 0 0;
+				font-size: 1.04rem;
+				line-height: 1.8;
+			}
+
+			.schedule {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.1rem 0.6rem;
+				padding: 1rem 1rem 0.1rem;
+				line-height: 1.6;
+			}
+
+			.schedule dt {
+				color: var(--c-red);
+				font-weight: 900;
+				font-size: 1.04rem;
+			}
+
+			.schedule dd {
+				font-weight: 700;
+				font-size: 1.04rem;
+				align-self: center;
+			}
+
+			.schedule-bubble {
+				display: flex;
+				justify-content: flex-end;
+				padding: 0.25rem 4.2rem 0.9rem 1rem;
+			}
+
+			.schedule-bubble span {
+				position: relative;
+				padding: 0.25rem 1.3rem;
+				background: no-repeat center / 100% 100%;
+				font-size: 0.91rem;
+				font-weight: 700;
+			}
+
+			/* パラシュートに向く吹き出しのしっぽ（SVGはしっぽ無しピルのためCSSで付与） */
+			.schedule-bubble span::after {
+				content: "";
+				position: absolute;
+				right: -0.55rem;
+				top: 50%;
+				border: 0.42rem solid transparent;
+				border-left-color: var(--c-yellow);
+				transform: translateY(-40%) rotate(-12deg);
+			}
+
+			/* カード右上・写真に重なる黄色いキラキラ */
+			.schedule-spark {
+				position: absolute;
+				top: -2.2rem;
+				right: 2%;
+				width: 3.6rem;
+				z-index: 2;
+			}
+
+			/* カード右下からはみ出すパラシュート（隣のカードより手前） */
+			.schedule-parachute {
+				position: absolute;
+				right: -0.5rem;
+				bottom: -0.5rem;
+				width: 4rem;
+				z-index: 2;
+			}
+
+			/* 文字階層：特大数字（strong）→ 大きめ太字（.u-em）→ 平文（dd）→ 注釈（small） */
+			.guide {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0.6rem 0.6rem;
+				padding: 1rem 1rem 1.1rem;
+				align-items: start;
+				line-height: 1.6;
+			}
+
+			/* 特大数字の行（参加費・対象年齢）はチップを行の縦中央に */
+			.guide dt:nth-of-type(2),
+			.guide dt:nth-of-type(3) {
+				margin-top: 0.45rem;
+			}
+
+			.guide dt {
+				padding: 0.1rem 0.45rem;
+				background: var(--c-green);
+				border-radius: 0.35rem;
+				color: #fff;
+				font-size: max(12px, 0.78rem);
+				font-weight: 700;
+				text-align: center;
+				white-space: nowrap;
+				margin-top: 0.2rem;
+			}
+
+			.guide dd {
+				font-size: 1.04rem;
+				font-weight: 700;
+			}
+
+			.guide .u-em {
+				font-size: 1.1rem;
+				font-weight: 700;
+			}
+
+			.guide small {
+				display: inline-block;
+				font-size: max(12px, 0.85rem);
+				font-weight: 500;
+			}
+
+			.u-right {
+				display: block;
+				text-align: right;
+			}
+
+			/* 赤文字の注意書き（現金のみ 等） */
+			.u-red {
+				color: var(--c-red);
+			}
+
+			.guide strong {
+				font-size: 1.5rem;
+				font-weight: 900;
+				white-space: nowrap;
+			}
+
+			/* 単位（円・歳〜）は数字よりひとまわり小さく */
+			.guide strong .u-unit {
+				font-size: 0.95rem;
+			}
+
+			/* 記名の注意書き：持ち物リストの下・14px相当 */
+			.guide-note {
+				display: block;
+				margin-top: 0.6rem;
+				font-size: max(12px, 0.875rem);
+			}
+
+			/* ---------- Hosts ---------- */
+
+			/* ご利用案内カードと同幅・同角丸の黄色カード */
+			.hosts {
+				max-width: 30rem;
+				margin: 0 auto;
+				padding: 1.75rem 0.5rem 0;
+			}
+
+			/* リボンが左上からはみ出すぶんの上余白を確保 */
+			.hosts-inner {
+				position: relative;
+				background: var(--c-hosts-bg);
+				border-radius: 0.9rem;
+				padding: 1rem 1rem 1.5rem;
+			}
+
+			/* 支給のリボンSVGを背景に。黄色カードの左上から少しはみ出す */
+			.hosts-ttl {
+				position: absolute;
+				top: -0.7rem;
+				left: -0.6rem;
+				width: 8.5rem;
+				padding: 0.8rem 0 1.1rem;
+				background: no-repeat center / 100% 100%;
+				color: #fff;
+				font-size: 0.9rem;
+				font-weight: 700;
+				line-height: 1.5;
+				text-align: center;
+			}
+
+			.hosts-ttl-text {
+				display: block;
+				transform: rotate(-8deg);
+			}
+
+			.hosts-grid {
+				display: grid;
+				gap: 1.5rem;
+				margin-top: 0.25rem;
+				clear: both;
+			}
+
+			.host-img {
+				display: block;
+				width: 53%;
+				margin: 0 auto;
+			}
+
+			.host-grad {
+				margin-top: 0.4rem;
+				font-size: 0.91rem;
+			}
+
+			.host-name {
+				font-size: 1.25rem;
+				font-weight: 900;
+				border-bottom: 1.5px solid var(--c-text);
+				padding-bottom: 0.1rem;
+			}
+
+			.host-desc {
+				margin-top: 0.4rem;
+				font-size: 1.04rem;
+				line-height: 1.7;
+			}
+
+			.hosts-bubble {
+				width: 100%;
+				margin: 1.5rem auto 0;
+				padding: 0.75rem 0.5rem;
+				background: #fff;
+				border-radius: 1.2rem;
+				font-size: max(12px, 1.04rem);
+				font-weight: 700;
+				text-align: center;
+				white-space: nowrap;
+			}
+
+			/* 極小画面では12px下限により1行に収まらないため折り返しを許可 */
+			@media (max-width: 350px) {
+				.hosts-bubble {
+					white-space: normal;
+				}
+			}
+
+			/* ---------- Notes ---------- */
+
+			.notes {
+				padding: 1.75rem 1rem 1rem;
+			}
+
+			/* 問い合わせ：チラシ準拠の茶色帯・白文字（下余白は固定CTAに隠れないぶんを含む） */
+			.contact {
+				margin-top: 1rem;
+				padding: 2rem 1rem 8.5rem;
+				background: var(--c-text);
+				text-align: center;
+			}
+
+			.contact a {
+				color: #fff;
+				font-size: max(12px, 0.97rem);
+				font-weight: 700;
+				letter-spacing: 0.05em;
+				text-decoration: underline;
+				text-underline-offset: 0.25em;
+			}
+
+			.notes-inner {
+				max-width: 30rem;
+				margin: 0 auto;
+			}
+
+			.notes-ttl {
+				font-size: 1.15rem;
+				font-weight: 900;
+			}
+
+			.notes-label {
+				margin-top: 1rem;
+				font-size: max(12px, 0.91rem);
+				font-weight: 900;
+			}
+
+			.notes ul {
+				list-style: none;
+			}
+
+			.notes li {
+				position: relative;
+				padding-left: 1.1em;
+				font-size: max(12px, 0.91rem);
+				line-height: 1.6;
+			}
+
+			.notes li + li {
+				margin-top: 0.5em;
+			}
+
+			.notes li::before {
+				content: "・";
+				position: absolute;
+				left: 0;
+			}
+
+			/* ---------- CTA（固定） ---------- */
+
+			.cta {
+				position: fixed;
+				z-index: 10;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+				background: rgba(255, 255, 255, 0.92);
+				box-shadow: 0 -0.15rem 0.5rem rgba(122, 82, 48, 0.15);
+			}
+
+			.cta-btn {
+				display: block;
+				padding: 0.8rem 1rem;
+				background: var(--c-pink);
+				border-radius: 2.5rem;
+				color: #fff;
+				font-size: 1.1rem;
+				font-weight: 900;
+				letter-spacing: 0.08em;
+				text-align: center;
+				text-decoration: none;
+			}
+
+			.cta-btn::after {
+				content: " »";
+			}
+
+			/* ---------- PC（768px〜） ---------- */
+
+			@media (min-width: 768px) {
+				/* ヒーロー：desktop用タイトル一式（幅730px固定・センター。BP=768なので常に収まる） */
+				.hero-lockup {
+					width: 730px;
+					padding-top: 1rem;
+				}
+
+				.hero-intro {
+					top: 74%;
+					/* タイトル幅に連動しつつ上限18px。cqw非対応ブラウザはremにフォールバック */
+					font-size: 1.125rem;
+					font-size: clamp(12px, 2.9cqw, 18px);
+				}
+
+				.hero {
+					padding-bottom: 12rem;
+				}
+
+				/* PC：横幅100%のcover・中央70%基準（従来どおり） */
+				.hero-photoImg {
+					left: 0;
+					transform: none;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center 64%;
+				}
+
+				.hero-deco--sparkWhite {
+					top: 61%;
+					left: calc(50% - 18rem);
+					width: 3.6rem;
+				}
+
+				.hero-deco--sparkYellow {
+					display: block;
+					top: 35%;
+					left: auto;
+					right: calc(50% - 26rem);
+					width: 3.6rem;
+				}
+
+				.schedule-spark {
+					display: none;
+				}
+
+				/* コンテンツ幅（1列のまま少し広げる） */
+				.cards,
+				.hosts,
+				.notes-inner {
+					max-width: 34rem;
+				}
+
+				.contact {
+					padding-bottom: 3rem;
+				}
+
+				/* 主催者リボン：黄色カードの左上から少しはみ出す */
+				.hosts-inner {
+					position: relative;
+					padding-top: 2.8rem;
+				}
+
+				.hosts-ttl {
+					position: absolute;
+					top: -0.9rem;
+					left: -0.8rem;
+				}
+
+				.cta {
+					left: auto;
+					right: 1.5rem;
+					bottom: 1.5rem;
+					padding: 0;
+					background: none;
+					box-shadow: none;
+				}
+
+				.cta-btn {
+					padding: 1rem 2.2rem;
+					box-shadow: 0 0.25rem 0.75rem rgba(122, 82, 48, 0.3);
+				}
+			}
+
+			/* ---------- PC（900px〜）：A4版の2カラム構成 ---------- */
+
+			@media (min-width: 900px) {
+				.cards {
+					max-width: 60rem;
+					grid-template-columns: 1fr 1fr;
+					align-items: stretch;
+					padding-top: 2.5rem;
+				}
+
+				/* 当日の流れ：カードの縦幅いっぱいに行間を分配 */
+				.card--schedule {
+					display: flex;
+					flex-direction: column;
+				}
+
+				.schedule {
+					flex: 1;
+					align-content: space-evenly;
+				}
+
+				.hosts {
+					max-width: 60rem;
+				}
+
+				.hosts-grid {
+					grid-template-columns: 1fr 1fr;
+					gap: 2.5rem;
+					margin-top: 1rem;
+				}
+
+				/* A4版はイラスト左・テキスト右 */
+				.host {
+					display: grid;
+					grid-template-columns: 7rem 1fr;
+					gap: 1rem;
+					align-items: start;
+				}
+
+				.host-img {
+					width: 100%;
+					margin: 0;
+				}
+
+				.host-grad {
+					margin-top: 0;
+				}
+
+				.notes-inner {
+					max-width: 60rem;
+				}
+
+				/* 幅に余裕があるので注釈は1行に */
+				.hosts-bubble br {
+					display: none;
+				}
+			}
+
+			/* 動きを減らす設定のユーザーにはパララックスを無効化（JS側でも判定） */
+			@media (prefers-reduced-motion: reduce) {
+				[data-parallax] {
+					transform: none !important;
+				}
+			}
+		</style>
+
+		<script is:inline>
+			(function () {
+				var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+				if (reduce) return;
+				var els = document.querySelectorAll("[data-parallax]");
+				// 各要素が「画面に入るスクロール位置」を起点に動かす（上部要素は0＝従来通り）
+				var starts = [];
+				function initStarts() {
+					var vh = window.innerHeight;
+					var y0 = window.scrollY || window.pageYOffset;
+					for (var i = 0; i < els.length; i++) {
+						var r = els[i].getBoundingClientRect();
+						var top = r.top + y0 - (parseFloat((els[i].style.transform.match(/,\s*(-?[\d.]+)px/) || [0, 0])[1]) || 0);
+						starts[i] = Math.max(0, top - vh);
+					}
+				}
+				var ticking = false;
+				function update() {
+					var y = window.scrollY || window.pageYOffset;
+					for (var i = 0; i < els.length; i++) {
+						var s = parseFloat(els[i].getAttribute("data-parallax"));
+						var d = Math.max(0, y - starts[i]);
+						els[i].style.transform = "translate3d(0," + d * s + "px,0)";
+					}
+					ticking = false;
+				}
+				initStarts();
+				window.addEventListener("resize", function () {
+					initStarts();
+					update();
+				});
+				window.addEventListener(
+					"scroll",
+					function () {
+						if (!ticking) {
+							requestAnimationFrame(update);
+							ticking = true;
+						}
+					},
+					{ passive: true }
+				);
+				update();
+			})();
+		</script>
+	</body>
+</html>
